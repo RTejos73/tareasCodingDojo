@@ -1,0 +1,62 @@
+* {
+    margin: 10px;
+    padding: 10px;
+    border: 0px;
+}
+
+body{
+    /* background-color: beige; */
+}
+.contenedor {
+    height: 1000px;
+    /* width: 1000px; */
+    margin: 0px auto;
+}
+/* header {
+    background-color: white;
+    width: 1000px;
+    height: 100px;
+} */
+#banner {
+    height: 300px;
+    background: black;
+    width: 1000px;
+}
+#noticias {
+    margin: 5px 0px;
+    height: 220px;
+    background-color: white;
+    display: inline-block;
+    padding: 0px 10px;
+    width: 980px;
+}
+#tienda {
+    background-color: chocolate;
+    height: 180px;
+}
+#marcas {
+    height: 100px;
+    background-color: cyan;
+}
+footer {
+    height : 60px;
+    background-color: darkgreen;
+}
+#noticias #noticia1 {
+    background-color: crimson;
+    width: 324px;
+    height: 220px;
+    display: inline-block;
+}
+#noticias #noticia2 {
+    background-color:aqua;
+    width: 324px;
+    height: 220px; 
+    display: inline-block; 
+}
+#noticias #noticia3 {
+    background-color:darkgoldenrod;
+    width: 324px;
+    height: 220px;
+    display: inline-block; 
+}

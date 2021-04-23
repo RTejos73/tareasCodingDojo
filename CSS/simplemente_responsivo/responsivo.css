@@ -1,0 +1,64 @@
+.container {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.row {
+    border: 2px solid blue;
+}
+
+@media only screen and (max-width:550px) {
+    .sm-1 {
+        width: 50%;
+        color: black;
+    }
+    .row {
+        border:2px solid green;
+    }
+    #span1::before {
+        content: "<= 550px";
+    }
+    #span2::before {
+        content: "less than or equal to <= 550px";
+    }
+}  
+
+@media only screen and (min-width:551px) {
+    
+    .med-2 {
+        width: 75%;
+        color: brown;
+    }
+    .row {
+        border: 2px solid yellow;
+    }
+    #span1::before {
+        content: "551px and 1023px";
+    }
+    #span2::before {
+        content: " between 551px and 1023px";
+    }
+}  
+
+@media only screen and (min-width:1024px) {    
+    .lg-4 {
+        width: 99%;
+        color: blue;
+    }
+    .row {
+        border: 2px solid green; 
+    }
+    #span1::before {
+        content: ">= 1024px";
+    }
+    #span2::before {
+        content: "greater than or equal to 1024px";
+    }
+} 

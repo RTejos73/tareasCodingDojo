@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo II</title>
+</head>
+
+<body>
+    <script>
+        //funcion 1
+        function printUpTo(x) {
+            // your code here
+            if (x <= 0) {
+                console.log("número negativo");
+                return false;
+            } else {
+                for (i = 1; i <= x; i++) {
+                    console.log(i);
+                }
+            }
+        }
+        printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
+        y = printUpTo(-10); // debería imprimir false
+        console.log(y); // debería imprimir false
+
+        //funcion 2
+        function printSum(x) {
+            var sum = 0;
+            //your code here
+            for (i = 0; i <= x; i++) {
+                sum += i
+                console.log('numero ' + i + ' suma parcial ' + sum);
+            }
+            return sum
+        }
+        y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+        console.log(y) // // debería imprimir 32640
+
+        // funcion 3
+        function printSumArray(x) {
+            var sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                //your code here
+                sum += x[i];
+            }
+            return sum;
+        }
+        console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+
+        // funcion 4
+        function moreLarge(x) {
+            var islarge = 0;
+            for (i = 0; i < x.length; i++) {
+                if (x[i] > islarge) {
+                    islarge = x[i];
+                }
+            }
+            return islarge;
+        }
+        console.log(moreLarge([1, 30, 5, 7]));
+    </script>
+</body>
+
+</html>

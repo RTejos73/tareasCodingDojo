@@ -1,0 +1,39 @@
+.container {
+    width: 1000px;
+    background-color: #D5D2AE;
+    padding: 20px;
+}
+main {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0px;
+}
+.img1 {
+    width: 140px;
+    height: 60px;
+    background-color: aliceblue;
+}
+.uno {
+    width: 390px;
+    display: inline-block;
+    font-size: 40px;
+    font-family: fantasy;
+}
+.imagenes {
+    width: 100%;
+    background-color: #D5D2AE;
+}
+.img2 {
+    width: 170px;
+    height: 150px;
+    border: 4px solid black;
+    padding: 15px;
+    background-color: #82B4EE;
+}
+.img3 {
+    width: 170px;
+    height: 180px;
+    border: 4px solid black;
+    background-color: #F83670;
+}

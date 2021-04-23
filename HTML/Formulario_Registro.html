@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de Registro">
+    <title>Registro de usuario</title>
+</head>
+
+<body>
+    <form>
+        <h1>Mi Formulario de Registro</h1>
+        <label>Nombre :<input type="text" name="nombre" placeholder="Ingresa tu Nombre"></input></label>
+        </br></br>
+        <label>Apellido :<input type="text" name="apellido" placeholder="Ingresa tu Apellido"></input></label>
+        </br></br>
+        <label>Email :<input type="email" name="email" placeholder="Ingresa tu Email"></input> </label>
+        </br></br>
+        <label>Contraseña :<input type="password" name="password" placeholder="Ingrese su Contraseña"></input></label>
+        </br></br>
+        <label>Confirmar :<input type="password" name="password" placeholder="Re escribe tu contraseña"></input>
+        </label>
+        </br></br>
+        <label for="cumpleanos">Cumpleaños</label>
+        <input type="date" id="cumpleanos" name="cumpleanos">
+        </br></br>
+        <input type="radio" id="hombre" name="genero" value="hombre">
+        <label for="hombre">Hombre</label>
+        <input type="radio" id="mujer" name="genero" value="mujer">
+        <label for="mujer">Mujer</label>
+        <input type="radio" id="otro" name="genero" value="otro">
+        <label for="otro">Otro</label>
+        </br></br>
+        <caption>Una breve descipcion de ti :</caption>
+        </br></br>
+        <label for="descrip"></label>
+        <textarea name="descrip" id="descrip" cols="30" rows="5" placeholder="Ingresar una descripcion"></textarea>
+        <br></br>
+        <caption>Lenguaje Favorito</caption>
+        <select name="lenguajes">
+            <option value="javascrip ">Javascript</option>
+            <option value="css">Css</option>
+            <option value="html">Html</option>
+            <option value="nodejs">Nodejs</option>
+        </select>
+        </br></br>
+        <button type="submit" value="enviar">Enviar</button>
+    </form>
+</body>
+
+</html>

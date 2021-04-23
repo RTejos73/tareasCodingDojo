@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo IV</title>
+</head>
+
+<body>
+    <script>
+        //ejercicio 1
+        // 1. Dados un array y un valor Y, cuenta e imprime (print) el número de valores del array que sean mayores que Y.
+
+        // function contar_mayores_que(arr1, y) {
+        //     let contador = 0;
+        //     let matriz2 = [];
+        //     for (i = 0; i < arr1.length; i++) {
+        //         if (arr1[i] > y) {
+        //             contador++;
+        //             matriz2.push(arr1[i]);
+        //         }
+        //     }
+        //     console.log("Los numeros del arreglo mayores que " + y + " son :" + matriz2);
+        //     console.log("La cantidad de numeros mayores es de :" + contador)
+        // }
+        // console.log(contar_mayores_que([5, 2, 8, 4, 8, 14], 5))
+
+        //ejercicio 2
+        //2. Dado un array, imprime los valores máximos (max), mínimos (min) y promedio (average) para el array. 
+        function max_min_promedio(arr2) {
+            let max = 0, min = arr2[0];
+            let suma = 0;
+            for (i = 0; i < arr2.length; i++) {
+                if (arr2[i] < min) {
+                    min = arr2[i];
+                }
+                if (arr2[i] > max) {
+                    max = arr2[i];
+                }
+                suma += arr2[i];
+            }
+            console.log("el valor minimo del arreglo es :" + min);
+            console.log("el valor maximo del arreglo es :" + max);
+            console.log("el valor promedio del arreglo es :" + suma / arr2.length);
+
+        }
+        max_min_promedio([21, 8, 34, 6, 3, 6, 8, 5, 43]);
+
+
+        // ejercicio 3
+        //  3. Dado un array de números, crea una función que dé como resultado un nuevo array donde los valores negativos se reemplacen por el texto (string) ‘Dojo’. Por ejemplo, reemplazarNegativos([1,2,-3,-5,5]) debiera devolver [1,2, “Dojo”, “Dojo”, 5].
+
+        // function reemplazarNegativos(arr3) {
+        //     nuevoarr = [];
+        //     for (i = 0; i < arr3.length; i++) {
+        //         if (arr3[i] < 0) {
+        //             nuevoarr.push("Dojo");
+        //         } else if (arr3[i] >= 0) {
+        //             nuevoarr.push(arr3[i]);
+        //         }
+        //     }
+        //     console.log(nuevoarr);
+        // }
+        // console.log(reemplazarNegativos([3, 4, -1, 5, -2, 6, -4, -3, 0]));
+
+        //ejercicio 4
+        //4. Dado un array y su respectivo índice, remueve los valores en el rango del índice dado( acortando el array). Por ejemplo, removerRango([20,30,40,50,60,70],2,4)debiera devolver [20,30,70].
+
+        // function removerRango(arr4, indices) {
+        //     // let largo_indice = indices.length
+        //     let contador = 0;
+        //     let nuevo_arr = arr4;
+        //     let ordenado = indices.sort();
+        //     console.log("Array Original " + arr4);
+        //     for (i = 0; i < indices.length; i++) {
+        //         if (ordenado[contador] <= indices.length) { }
+        //         nuevo_arr.splice(ordenado[contador], 1);
+        //         console.log("Nuevo arr parcial es :" + nuevo_arr);
+        //         contador++;
+        //     }
+        //     console.log("nuevo array " + arr4);
+        // }
+        // removerRango([20, 30, 40, 50, 60, 70], [3, 1, 4]);
+
+
+        //ejercicio 4, eliminando un rango de numeros
+        // function removerRango2(arr4, indices) {
+        //     // let largo_indice = indices.length
+        //     let nuevo_arr = arr4;
+
+        //     let ordenado = indices.sort();
+        //     let rango = (ordenado[1] - ordenado[0]) + 1;
+        //     nuevo_arr.splice([ordenado[0]], rango);
+        //     console.log("nuevo array " + arr4);
+        // }
+
+
+        // removerRango2([20, 30, 40, 50, 60, 70], [2, 4]);
+
+
+
+    </script>
+</body>
+
+</html>

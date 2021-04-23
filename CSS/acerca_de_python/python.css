@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#container {
+    width: 970px;
+    margin: 0 auto;
+    color: white;
+    background-color: #242576;
+}
+.top {
+    padding: 15px;
+}
+.cabecera-derecha a {
+    color: #CBAD04;
+}
+.cabecera-derecha span {
+    color: black;
+}
+.cabecera-derecha {
+    display: inline-block;
+    margin-left: 250px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 5px;
+}
+#cabecera img {
+    width: 370px;
+}
+.buscar {
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #444444;
+    padding-top: 15px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px black;
+}
+input {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid silver;
+    box-shadow: 2px 2px 2px black;
+}
+button {
+    color: white;
+    text-align: center;
+    margin-left: 5px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    background-color: #245176;
+    box-shadow: 2px 2px 2px black;
+}
+#nav {
+    width: 800px;
+    list-style: none;
+    background-color: #3E79AD;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 2px white;
+}
+#nav-1 {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+    margin-left: 100px;
+}
+#nav-1 li {
+    margin: 10px;
+} 
+#nav-1 a {
+    color: white;
+}
+#nav-1 span {
+    color: #CBAD04;
+    margin-right: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+#contenido {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 550px;
+}
+#contenido p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+#contenido h3 {
+    font-weight: normal;
+    color: #CBAD04;
+    font-style: italic;
+    margin: 5px;
+}
+#contenido h4 {
+    font-weight: normal;
+    margin: 15px;
+    /* padding-top: 10px; */
+}
+#contenido-medio {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 40px;
+}
+#contenido-medio div {
+    width: 420px;
+    border-top: 4px solid #73a7D5;
+    text-align: center;
+    color: black;
+
+}
+#contenido-medio p {
+    font-size: 15px;
+    width: 370px;
+    margin: 5px auto 10px auto;
+}
+#contenido-medio span {
+    color: #88b4bd;
+}
+#contenido-medio ul {
+    list-style: square;  /* deja el circulo como cuadradito */
+    margin-left: 45px;
+    width: 450px;
+}
+#contenido-medio ul a {
+    margin-left: -100px;
+    text-decoration: none;
+    color: #88b4bd;
+    font-size: 15px;
+}
+#pie {
+    text-align: center;
+    /* background: linear-gradiant(#245176,#3374ab) */
+    ;
+    background-color: #242576;
+    color: #88b4bd;
+}
+#pie ul {
+    list-style: none;
+    margin: 20px auto;
+    
+}
+#pie li {
+    display: inline;
+    margin: 20px;
+}
+#pie p{
+    font-size: 15px;
+    height: 30px;
+}

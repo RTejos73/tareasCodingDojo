@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>algoritmo V</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 1
+        // Configura un array para que los valores negativos se transformen en 0. Por ejemplo, resetNegativos([1,2,-1,-3]) debiera dar como resultado [1,2,0,0].
+
+        // function resetNegativos(arreglo1) {
+        //     for (i = 0; i < arreglo1.length; i++) {
+        //         if (arreglo1[i] < 0) {
+        //             arreglo1[i] = 0;
+        //         }
+        //     }
+        //     return arreglo1;
+        // }
+        // console.log(resetNegativos([1, 2, -1, -3]));
+
+
+        // Ejercicio 2
+        // Dado un array, mueve todos los valores un espacio de derecha a izquierda eliminando el primer valor y dejando un 0 para el último valor. Por ejemplo, moverAdelante([1,2,3]) debiera dar como resultado [2,3,0].
+
+        function moverAdelante(arreglo2) {
+            // let aux = [];
+            // for (i = 1; i < arreglo2.length; i++) {
+            //     aux[i - 1] = arreglo2[i];
+            // }
+            // aux.push(0);
+            // console.log(aux);
+            arreglo2.splice(0, 1);
+            arreglo2.push(0);
+            console.log(arreglo2);
+
+        }
+        console.log(moverAdelante([1, 2, 3]));
+
+
+        //Ejercicio 3
+        // Configura un array para que el resultado sean los valores en el orden contrario. Por ejemplo, returnReverso([1,2,3]) debe dar [3,2,1].
+
+        // function returnReverso(arreglo3) {
+        //     let aux = [];
+        //     for (i = arreglo3.length - 1; i >= 0; i--) {
+        //         aux.push(arreglo3[i]);
+        //     }
+        //     return aux;
+        // }
+        // console.log(returnReverso([1, 2, 3, 4, 5, 7, 9]));
+
+
+        // Ejercicio 4
+        // Crea una función que cambie un array repitiendo sus valores originales (manteniendo el mismo orden). Por ejemplo, repetirValores([4,”Ulysses”, 42, false]) debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].
+
+        // function repetirValores(arreglo4) {
+        //     let aux = [];
+        //     let j = 0;
+        //     for (i = 0; i < arreglo4.length; i++) {
+        //         aux[j] = arreglo4[i];
+        //         aux.push(arreglo4[i]);
+        //         j = j + 2;
+        //     }
+        //     return aux;
+        // }
+        // console.log(repetirValores([4, "Ulysses", 42, false]));
+
+    </script>
+</body>
+
+</html>

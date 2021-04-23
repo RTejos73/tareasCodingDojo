@@ -1,0 +1,30 @@
+.container {
+    font-size: 20px;
+}
+#contenedor {
+    height: 110px;
+    font-size: 20px;
+}
+#heder{
+    width: 300px;
+    height: 35px;
+    color: white;
+    background-color: #2A626E ;
+    text-align: center;
+    
+}
+#asid {
+    background-color: #46A3B8;
+    text-align: center;
+    color: white;
+}
+#menu{
+    background-color: #F4C109;
+}
+#foter {
+    background-color: #3CA745;
+    height: 70px;
+    vertical-align: middle;
+    text-align: center;
+    color:  white;
+}
