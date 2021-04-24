@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="formulario.js"></script>
+    <title>Formulario interactivo</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="primero">
+            <div id="uno">
+                <label for="">Primer Numero :</label>
+                <input type="number" id="primerNUmero">
+
+            </div>
+            <div id="dos">
+                <label for="">Primer Numero :</label>
+                <input type="number" id="segundoNumero">
+            </div>
+        </div>
+        <div id="segundo">
+            <p>Seleccione un operador :<br>
+
+                <label><input type="radio" name="sumaresta" value="sumar" class="uno">Sumar</label>
+
+                <label><input type="radio" name="sumaresta" value="restar" class="uno">Restar</label>
+
+                <label><input type="radio" name="sumaresta" value="multiplicar" class="uno">Multiplicar</label>
+                <label><input type="radio" name="sumaresta" value="dividir" class="uno">Dividir</label>
+
+            </p>
+            <p>
+                <button type="button" onclick="calcular()">Calcular</button>
+            </p>
+        </div>
+        <div id="tercero" style="display: none">
+            <p id="parrafo1"> </p>
+            <button onclick="borrar()">Borrar</button>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
