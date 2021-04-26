@@ -57,7 +57,6 @@
       "version": "3.7.0",
       "resolved": "https://registry.npmjs.org/jasmine/-/jasmine-3.7.0.tgz",
       "integrity": "sha512-wlzGQ+cIFzMEsI+wDqmOwvnjTvolLFwlcpYLCqSPPH0prOQaW3P+IzMhHYn934l1imNvw07oCyX+vGUv3wmtSQ==",
-      "dev": true,
       "requires": {
         "glob": "^7.1.6",
         "jasmine-core": "~3.7.0"
@@ -93,6 +92,9 @@
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
       "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
+    },
+    "scripts": {
+      "test": "jasmine"
     }
   }
 }
