@@ -66,8 +66,12 @@ console.log(ult);
 
 // Ejercicio 6
 // Array: segundo mas grande - Devuelve el segundo elemento más grande de un array. Dado [42,1,4,3.14,7], devuelve 7.  Si el array es muy pequeño, devuelve null.
-function segundoMasGrande() {
+function segundoMasGrande(gde) {
 
+    let arr2 = gde.sort((a, b) => {
+        return a - b
+    });
+    console.log(arr2[arr2.length - 2]);
 
 
 }
@@ -76,3 +80,12 @@ segundoMasGrande([42, 1, 4, 3.14, 7]);
 
 // Ejercicio 7
 // Doble problema par - Crea una función que cambie un array dado duplicando cada uno de sus elementos en una posición par, y manteniendo el orden original. Convierte [4, "Ulysses", 42, false]   a    [4,4, "Ulysses", "Ulysses", 42, 42, false, false].
+function conviertaPar(ab) {
+    for (i = 0; i < ab.length; i++) {
+        ab.splice(i + 1, 0, ab[i]);
+        i++;
+    }
+    console.log(ab);
+}
+
+conviertaPar([4, "Ulysses", 42, false]);
