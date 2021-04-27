@@ -1,0 +1,126 @@
+#contenedor {
+    background: #FEFEFE;
+    color:  #2F709C;
+    width: 1200px;
+
+}
+#row {
+    width: 80%;
+    margin: 20px auto;
+}
+#fila {
+    width: 800px;
+    /* background-color: beige; */
+    margin: 30px auto;
+
+}
+#tipo {
+    border: 10px solid #EAEAEA;
+    margin : 50px auto;
+    border-radius: 25px;
+    height: 200px;
+    
+}
+#hh2 {
+    margin-top: 15px;
+    color: black;
+    margin-left: 50px;
+}
+#filaboton {
+    margin: 10px auto;
+
+}
+.boton1, .boton2 {
+    /* margin-top: 15px auto; */
+    display: inline-block;
+    width : 40%;
+    height: 50px;
+    border: 2px solid #A6C1D2;
+    color: #2F709C;
+    border-radius: 5px;
+    padding-top: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    
+}
+.boton1 {
+    background-color: #2F709C;
+    color:white ;
+}
+
+.boton2 {
+    
+}
+.boton3 {
+    width: 200px;
+    border: 3px solid blue;
+    display: inline-block;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 100px;
+}
+#tipo2 p {
+    display: inline-block;
+    width: 45%;
+    /* border: 10px solid #EAEAEA; */
+    margin : 20px 18px;
+    border-radius: 25px;
+    height: 100px;
+    vertical-align: top;
+    
+}
+#tipo3 {
+    padding: 20px 0px 10px 50px;
+    border: 10px solid #EAEAEA;
+    margin : 50px auto;
+    border-radius: 25px;
+    height: 650px;
+    
+}
+    #tipo3 p {
+        color: black;
+    }
+input {
+    width: 350px;
+    border-radius: 5px;
+    height: 50px;
+    padding-left: 10px;
+    /* margin: 10px 0px; */
+}
+.co{
+    width: 800px;
+    margin: 10px auto;
+    /* display: block;
+    width: 290px; */
+    height: 110px;
+}
+.co-6 {
+    display: inline-block;
+    width: 380px;
+    /* background-color: aqua; */
+}
+.co-5 {
+    display: inline-block;
+    width: 380px;
+    /* background-color: aqua; */
+}
+#entrada {
+    width: 305px;
+    margin-left: 5px;
+}
+.co1 {
+    display: inline-block;
+    width: 200px;
+}
+.entrada1 {
+    width: 30px;
+    height: 20px;
+    /* margin-left: 5px; */
+}
+#etiqueta {
+    /* height: 20px; */
+    padding-bottom: 2px;
+}
