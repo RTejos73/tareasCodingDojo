@@ -8,6 +8,15 @@
     width: 80%;
     margin: 20px auto;
 }
+#row1 {
+    width: 80%;
+    margin: 20px auto;
+}
+#row2 {
+    width: 80%;
+    margin: 20px auto;
+}
+
 #fila {
     width: 800px;
     /* background-color: beige; */
@@ -45,8 +54,8 @@
     
 }
 .boton1 {
-    background-color: #2F709C;
-    color:white ;
+    /* background-color: #2F709C; */
+    /* color:white ; */
 }
 
 .boton2 {
@@ -62,6 +71,17 @@
     text-align: center;
     margin: 0 100px;
 }
+.boton4 {
+    width: 200px;
+    border: 3px solid blue;
+    display: inline-block;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0px 30px 500px;
+}
+
 #tipo2 p {
     display: inline-block;
     width: 45%;
@@ -83,6 +103,15 @@
     #tipo3 p {
         color: black;
     }
+
+#tipo4 {
+    padding: 20px 0px 10px 50px;
+    border: 10px solid #EAEAEA;
+    margin : 50px auto;
+    border-radius: 25px;
+    height: 330px;
+    
+}
 input {
     width: 350px;
     border-radius: 5px;
@@ -116,9 +145,9 @@ input {
     width: 200px;
 }
 .entrada1 {
-    width: 30px;
-    height: 20px;
-    /* margin-left: 5px; */
+    width: 300px;
+    height: 50px;
+    margin-left: 10px;
 }
 #etiqueta {
     /* height: 20px; */

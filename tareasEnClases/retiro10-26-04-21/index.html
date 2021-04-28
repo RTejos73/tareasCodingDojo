@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/tareasEnClases/retiro10-26-04-21/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="funciones.js"></script>
     <title>Retiro del 10%</title>
 </head>
 
@@ -16,13 +17,13 @@
         <header id="cabeza">
             <h1>¿Cómo llenar el formulario para pedir el retiro de mi 10%?</h1>
         </header>
-        <div id="row">
+        <div class="row" id="primerpanel" style="display: block;">
             <h2>Debes elegir cuánto quieres retirar.</h2>
             <div id="tipo">
-                <h2 id="hh2">Quiero retirar mi 10%</h2>
+                <h2 class="hh2">Quiero retirar mi 10%</h2>
                 <div id="filaboton">
-                    <div class="boton1">Retirar el Máximo</div>
-                    <div class="boton2">Retirar monton inferior</div>
+                    <div class="boton1" onclick="retMaximo()" id="boton1">Retirar el Máximo</div>
+                    <div class="boton2" onclick="retOtro()" id="boton2">Retirar monton inferior</div>
                 </div>
             </div>
             <div id="tipo2">
@@ -30,20 +31,21 @@
                     elegir la opcion SOLICITAR RETIRO MAXIMO.</p>
                 <p>Si deseas retirar menos que el m[aximo permitido, elegir OTRO MONTO INFERIOR.</p>
             </div>
+            <hr class="row">
+            </hr>
         </div>
-        <hr id="row">
-        </hr>
-        <div id="row">
+
+        <div class="row1" style="display: none;" id="segundopanel">
             <div>
                 <h2>Ingresa tus datos personales. Todos los datos deben ser de la persona que está realizando el retiro.
                 </h2>
             </div>
 
             <div id="tipo3">
-                <h2 id="hh2">Ingresa tus datos personales</h2>
+                <h2 class="hh2">Ingresa tus datos personales</h2>
 
                 <div class="co">
-                    <label for="">RUT (sin puntos ni guion)</label><br>
+                    <label for="" id="rut">RUT (sin puntos ni guion)</label><br>
                     <input type="text" placeholder="RUT">
                     <p id="rut"></p>
                 </div>
@@ -74,39 +76,45 @@
                 <div class="co">
                     <div class="co-5">
                         <label for="">Numero de Celular</label><br>
-                        +569<input type="text" id="entrada">
+                        +569<input type="text" class="entrada1">
                         <p id="fono1"></p>
                     </div>
                     <div class="co-5">
                         <label for="">Confirmar Numero de Celular</label><br>
-                        <div>+569<input type="text" id="entrada"></span></div>
+                        <div>+569<input type="text" class="entrada1"></span></div>
                         <p id="fono2"></p>
                     </div>
                 </div>
                 <div>
                     <div id="filaboton">
-                        <div class="boton3">Volver</div>
-                        <div class="boton3">Siguiente</div>
+                        <div class="boton3" id="volver" onclick="volver()">Volver</div>
+                        <div class="boton3" id="siguiente1">Siguiente</div>
                     </div>
                 </div>
 
             </div>
+            <hr class="row">
+            </hr>
         </div>
-        <hr id="row">
-        </hr>
-        <div id="row">
-            <h2 id="hh2">Selecciona la modalidad de pago</h2>
-            <div id="tipo3">
-                <h2 id="hh2">Elige tu modalidad de Pago</h2>
+
+        <div class="row2" style="display: none;">
+            <h2 class="hh2">Selecciona la modalidad de pago</h2>
+            <div id="tipo4">
+                <h2 class="hh2">Elige tu modalidad de Pago</h2>
 
                 <div>
-                    <input type="radio" class="entrada1"><label id="etiqueta" for="">Cuanta RUT(Banco Estado)</label>
-                    <input type="radio" class="entrada1"><label id="etiqueta" for="">Cuenta de otro banco</label>
+                    <input type="radio" name="mediopago" id="ctarut" class="entrada1"><label id="etiqueta" for="">Cuanta
+                        RUT(Banco Estado)</label>
+                    <input type="radio" name="mediopago" id="otrobco" class="entrada1"><label id="etiqueta"
+                        for="">Cuenta de otro banco</label>
                 </div>
-                <hr id="row">
+                <hr class="row">
                 </hr>
-                <h5 id="hh2">Transferencia a Cuenta de Ahorro Voluntario (Cuenta 2) en tu AFP</h5>
-
+                <h5 class="hh2">Transferencia a Cuenta de Ahorro Voluntario (Cuenta 2) en tu AFP</h5>
+                <input type="radio" name="mediopago" id="cta2" class="entrada1"><label>Cunta de Ahorro Voluntario
+                    (Cuenta 2)</label></input>
+                <br>
+                <div class="boton4">Siguiente</div>
             </div>
 
 
