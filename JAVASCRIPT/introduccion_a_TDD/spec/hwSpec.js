@@ -17,18 +17,18 @@ function sumFirstLast(arr) {
 
 
 let as1 = Sum1toN(2);
-console.log(as1);
+// console.log(as1);
 let as2 = Sum1toN(3);
-console.log(as2);
+// console.log(as2);
 let as3 = Sum1toN(4);
-console.log(as3);
+// console.log(as3);
 
 let suma1 = sumFirstLast([1, 2]);
-console.log(suma1);
+// console.log(suma1);
 let suma2 = sumFirstLast([2, 3, 8]);
-console.log(suma2);
+// console.log(suma2);
 let suma3 = sumFirstLast([-6, 23, 3, -4]);
-console.log(suma3);
+// console.log(suma3);
 
 
 function reverseArray(arr) {
