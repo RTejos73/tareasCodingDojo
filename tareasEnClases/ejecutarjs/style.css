@@ -1,0 +1,46 @@
+.container {
+    width: 600px;
+    background-color: cadetblue;
+    margin-left: 150px;
+    text-align: center;
+    height: 650px;
+    
+}
+#form {
+    color:white;
+}
+.entrada {
+    width: 200px;
+    height: 25px;
+}
+#boton {
+    margin: 50px auto;
+    background: #4568DC;
+    display: block;
+    width: 30%;
+    border-radius: 25px;
+    color: #fff;
+    height: 40px;
+    cursor: pointer;
+
+
+}
+#mostrar {
+    background-color: darkcyan;
+    height: 150px;
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    padding-top: 15px;
+
+
+}
+
+#datos, #entrada {
+    margin: 5px auto;
+    width: 70%;
+    /* background-color: aliceblue; */
+    color: blue;
+    font-size: 35px;
+
+}

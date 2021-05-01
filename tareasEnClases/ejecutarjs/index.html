@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="main.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Formulario1</title>
+</head>
+<body>
+    
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">Formulario</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                
+                
+                </div>
+            </div>
+        </nav>   
+    
+
+        <div class="container">
+            
+            <form >
+                <fieldset>             
+                  <div class="form-group">
+                    <label for="imputNane">Nombre</label>
+                    <input type="text" class="form-control" id="imputNane" placeholder="Ingrese su Nombre">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="imputApellido">Apellido</label>
+                    <input type="text" class="form-control" id="imputApellido" placeholder="Ingrese su Apellido">
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="imputEdad">Edad</label>
+                    <input type="number" class="form-control" id="imputEdad" placeholder="Ingrese su Edad">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="imputCiudad">Cuidad</label>
+                    <input type="text" class="form-control" id="imputCiudad" placeholder="Ingrese su Ciudad">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="imputPais">Pais</label>
+                    <input type="text" class="form-control" id="imputPais" placeholder="Ingrese su Pais">
+                  </div>
+                  <br>
+                  <button type="button" class="btn btn-primary" onclick="IngresarPersona()">Enviar</button>
+                </fieldset>
+            </form>
+                <br>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Edad</th>
+                      <th scope="col">Ciudad</th>
+                      <th scope="col">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="datos">
+                     
+                  </tbody>
+
+                </table>                  
+</div>
+
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>

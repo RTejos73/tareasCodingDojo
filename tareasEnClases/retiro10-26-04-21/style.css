@@ -53,9 +53,11 @@
     margin-left: 50px;
     
 }
-.boton1 {
-    /* background-color: #2F709C; */
-    /* color:white ; */
+.boton1:hover  {
+    cursor: pointer;
+}
+.boton1::selection {
+    background-color: #2F709C;
 }
 
 .boton2 {

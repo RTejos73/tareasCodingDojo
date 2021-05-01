@@ -1,4 +1,4 @@
-function calcular() {
+function enviar() {
     var fecha = new Date();
     var anoactual = fecha.getFullYear();
     var naci = parseInt(document.getElementById('nacimiento').value);

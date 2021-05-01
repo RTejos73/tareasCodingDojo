@@ -1,5 +1,9 @@
 
 const volver1 = document.getElementById('volver');
+const elRut1 = document.getElementById('rut1');
+const valorRut = document.getElementById('rut1');
+
+// elRut1.addEventListener("focusout", valrut(valorRut));
 
 
 
