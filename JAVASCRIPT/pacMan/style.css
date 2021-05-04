@@ -11,7 +11,6 @@ div#world {
     position: relative;
 }
 
-
 div.row div {
     width:30px;
     height: 30px;
@@ -21,17 +20,29 @@ div.row div {
 
 div.brick {
     background-color: blue;
-
 }
 
 div.coin {
     background: url(coin.gif) no-repeat center; 
 }
-div.cherry {
-    background: url(cereza2.gif) no-repeat center;
+div.igual {
+    content: "=";
+    /* position: absolute; */
+    /* background-size: cover; */
+    color:  blue;
+}
+div.ghost {
+    background: url(ghost.gif) no-repeat center;
     background-size: cover;
-    width: 20px;
-    height: 20px;
+}
+div.energyzer:after {
+    content: ".";
+    position: absolute;
+    font-size: 120px;
+    color: white;
+    margin-left: 10px;
+    top: -28px;
+    left: 20px;
 }
 
 /* div.empty {
@@ -53,6 +64,14 @@ div#score   {
     color: white;
     padding: 7px;
     position: absolute;
-    top: 10px;
-    left: 310px
+    top: 22px;
+    left: 600px
+}
+
+div#gameover {
+    position: absolute;
+    top: 130px;
+    left: 170px;
+    font-size: 50px;
+    color: white;
 }

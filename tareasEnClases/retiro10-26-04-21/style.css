@@ -60,9 +60,14 @@
     background-color: #2F709C;
 }
 
-.boton2 {
-    
+#volver:hover, #siguiente1:hover {
+    cursor: pointer;
+
 }
+.boton2 {
+
+}
+
 .boton3 {
     width: 200px;
     border: 3px solid blue;
@@ -100,7 +105,7 @@
     margin : 50px auto;
     border-radius: 25px;
     height: 650px;
-    
+    vertical-align: top;
 }
     #tipo3 p {
         color: black;
@@ -132,11 +137,13 @@ input {
     display: inline-block;
     width: 380px;
     /* background-color: aqua; */
+    vertical-align: top;
 }
 .co-5 {
     display: inline-block;
     width: 380px;
     /* background-color: aqua; */
+    vertical-align: top;
 }
 #entrada {
     width: 305px;
@@ -149,9 +156,23 @@ input {
 .entrada1 {
     width: 300px;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 13px;
+}
+.entrada2 {
+    width: 50px;
+    height: 15px;
+    
 }
 #etiqueta {
     /* height: 20px; */
     padding-bottom: 2px;
+}
+#email1, #email2, #doc1, #doc2, #pfono1, #pfono2 {
+    width: 350px;
+}
+
+#tipo4 p {
+    width: 300px;
+    height: 20px;
+    margin-left: 55px;
 }

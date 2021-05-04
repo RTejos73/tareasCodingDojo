@@ -14,10 +14,11 @@
 <body>
     <div class="container" id="contenedor">
 
-        <header id="cabeza">
-            <h1>¿Cómo llenar el formulario para pedir el retiro de mi 10%?</h1>
-        </header>
+
         <div class="row" id="primerpanel" style="display: block;">
+            <header id="cabeza">
+                <h1>¿Cómo llenar el formulario para pedir el retiro de mi 10%?</h1>
+            </header>
             <h2>Debes elegir cuánto quieres retirar.</h2>
             <div id="tipo">
                 <h2 class="hh2">Quiero retirar mi 10%</h2>
@@ -45,50 +46,53 @@
                 <h2 class="hh2">Ingresa tus datos personales</h2>
 
                 <div class="co">
-                    <label for="" id="rut">RUT (sin puntos ni guion)</label><br>
-                    <input type="text" placeholder="123334445" id="rut1">
+                    <label for="">RUT (sin puntos ni guion)</label><br>
+                    <!-- <input type="text" placeholder="112223334" id="rut1" onblur="valrut()"> -->
+                    <input type="text" placeholder="112223334" id="rut1">
                     <p id="rut"></p>
                 </div>
                 <div class="co">
                     <div class="co-6">
                         <label for="">Numero de Serie o Documento</label><br>
-                        <input type="text" placeholder="ADOC000001">
+                        <input type="text" placeholder="111111111" id="serie1">
                         <p id="doc1"></p>
                     </div>
                     <div class="co-6">
                         <label for="">Confirmas Numero de Serie o Documento</label><br>
-                        <input type="text" placeholder="ADOC000001">
+                        <input type="text" placeholder="111111111" id="serie2" onblur="validaDocumento()">
                         <p id="doc2"></p>
                     </div>
                 </div>
                 <div class="co">
                     <div class="co-6">
                         <label for="">E-mail</label><br>
-                        <input type="text" placeholder="email@dominio.com">
+                        <input type="text" placeholder="email@dominio.com" id="mail1" onblur="validaEmail1()">
                         <p id="email1"></p>
                     </div>
                     <div class="co-6">
                         <label for="">Confirmar E-mail</label><br>
-                        <input type="text" placeholder="email@dominio.com">
+                        <input type="text" placeholder="email@dominio.com" id="mail2" onblur="validaEmail2()">
                         <p id="email2"></p>
                     </div>
                 </div>
                 <div class="co">
                     <div class="co-5">
                         <label for="">Numero de Celular</label><br>
-                        +569<input type="text" class="entrada1">
-                        <p id="fono1"></p>
+                        +56 9<input type="text" class="entrada1" id="fono1" pattern="[0-9]{8} required"
+                            placeholder="12345678" onblur="validaFono(1)">
+                        <p id="pfono1"></p>
                     </div>
                     <div class="co-5">
                         <label for="">Confirmar Numero de Celular</label><br>
-                        <div>+569<input type="text" class="entrada1"></span></div>
-                        <p id="fono2"></p>
+                        <div>+56 9<input type="text" class="entrada1" id="fono2" pattern="[0-9]{8} required"
+                                placeholder="12345678" onblur="validaFono(2)"></span></div>
+                        <p id="pfono2"></p>
                     </div>
                 </div>
                 <div>
                     <div id="filaboton">
                         <div class="boton3" id="volver" onclick="volver()">Volver</div>
-                        <div class="boton3" id="siguiente1">Siguiente</div>
+                        <div class="boton3" id="siguiente1" onclick="avanza1()">Siguiente</div>
                     </div>
                 </div>
 
@@ -97,22 +101,25 @@
             </hr>
         </div>
 
-        <div class="row2" style="display: none;">
+        <div class="row2" style="display: none;" id="tercerpanel" style="display: none;">
             <h2 class="hh2">Selecciona la modalidad de pago</h2>
             <div id="tipo4">
                 <h2 class="hh2">Elige tu modalidad de Pago</h2>
-
                 <div>
-                    <input type="radio" name="mediopago" id="ctarut" class="entrada1"><label id="etiqueta" for="">Cuanta
+                    <input type="radio" name="mediopago" id="ctarut" class="entrada2" onclick="ctaRut()">
+                    <label id="etiqueta" for="">Cuanta
                         RUT(Banco Estado)</label>
-                    <input type="radio" name="mediopago" id="otrobco" class="entrada1"><label id="etiqueta"
-                        for="">Cuenta de otro banco</label>
+                    <p id="cta1"></p>
+                    <input type="radio" name="mediopago" id="otrobco" class="entrada2">
+                    <label id="etiqueta" for="">Cuenta de otro banco</label>
+                    <p id="cta2"></p>
                 </div>
                 <hr class="row">
                 </hr>
                 <h5 class="hh2">Transferencia a Cuenta de Ahorro Voluntario (Cuenta 2) en tu AFP</h5>
-                <input type="radio" name="mediopago" id="cta2" class="entrada1"><label>Cunta de Ahorro Voluntario
+                <input type="radio" name="mediopago" id="cta2" class="entrada2"><label>Cunta de Ahorro Voluntario
                     (Cuenta 2)</label></input>
+                <p id="cta3"></p>
                 <br>
                 <div class="boton4">Siguiente</div>
             </div>
