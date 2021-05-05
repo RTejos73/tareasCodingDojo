@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Como usar JQuery</title>
+
+    <script>
+        $(document).ready(function () {
+            $('h1').click(function () {
+                $('p').toggle();
+            });
+
+            $('p').hover(function () {
+                $('a').hide();
+            }, function () {
+                $('a').show();
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Hola Mundo con JQuery</h1>
+    <p>parrafo a cultar</p>
+    <a href="">enlace de ancla</a>
+</body>
+
+</html>
