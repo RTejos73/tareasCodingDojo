@@ -1,0 +1,28 @@
+.pp-1 {
+    color: red;
+}
+
+.div1, .div2 {
+    background: #9caeeb;
+    margin: 3px;
+    padding: 20px 0px;
+    /* width: 720px; */
+    height: 150px;
+}
+
+.div3 {
+    height: auto;
+}
+
+.pp2 {
+    margin: 0px;
+    padding: 0%;
+    align-items: center;
+}
+
+.cl1, .cl2, .cl3 {
+    width: 500px;
+    height: 100px;
+    display: none;
+    border: 2px solid blue;
+}
