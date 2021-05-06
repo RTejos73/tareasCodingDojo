@@ -9,75 +9,10 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="/JQUERY/funciones-jquery/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/JQUERY/funciones-jquery/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
 
-            $('#btn1').click(function () {
-                $('#p1').addClass('p-1');
-            });
-
-            $('#btn2').click(function () {
-                $('#p1').removeClass('p-1');
-            });
-
-            $('#btn3').click(function () {
-                $('#p2').slideToggle(500);
-            });
-
-            $('#btn4').click(function () {
-                $('#p3').hide();
-            });
-            $('#btn5').click(function () {
-                $('#p3').show();
-            });
-            $('#btn6').click(function () {
-                $('#p4').toggle();
-            });
-            $('#btn7').click(function () {
-                $('#dv1').slideUp();
-                // alert('ads');
-            });
-            $('#btn8').click(function () {
-                $('#dv1').slideDown();
-                // alert('ads');
-            });
-            $('#btn9').click(function () {
-                $('#dv2').slideToggle();
-                let estado = $('#btn9').html();
-                console.log(estado);
-                if (estado == "slideUp") {
-                    $('#btn9').html('slideDown');
-                } else {
-                    $('#btn9').html('slideUp');
-                }
-            });
-            $('#btn10').click(function () {
-                $('#dv3').css('display', 'block');
-                let estado = $('#btn10').html();
-                if (estado == 'fadeIn') {
-                    $('.cl1').css('background-color', 'blue');
-                    $('.cl2').css('background-color', 'aqua');
-                    $('.cl3').css('background-color', 'coral');
-                    $('.cl1').fadeIn();
-                    $('.cl2').fadeIn('slow');
-                    $('.cl3').fadeIn(2500);
-                    $('#btn10').html('fadeOut');
-                } else {
-                    $('.cl1').fadeOut();
-                    $('.cl2').fadeOut('slow');
-                    $('.cl3').fadeOut(2500);
-                    $('#btn10').html('fadeIn');
-                }
-            });
-
-
-
-
-
-        });
-    </script>
     <title>Funciones de JQuery</title>
 </head>
 
@@ -174,14 +109,58 @@
         <div class="row border">
             <div class="col-4 my-auto">
                 <button type="button" class="button btn-primary d-block p-2 mb-3 mx-auto rounded-pill w-50"
-                    id="btn11"></button>
+                    id="btn11">after - before</button>
             </div>
             <div class="col-8 my-3">
-                <h2 class="ms-5">fadeIn and fadeOut</h2>
+                <h2 class="ms-5">after and before</h2>
                 <div class="row div4" id="dv4">
-                    <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam!</p>
-                    <p id="p6">Quo nemo laboriosam eligendi eum recusandae veniam earum voluptatibus.</p>
+                    <p id="p5">Parrafo de Prueba after and before</p>
+                </div>
+            </div>
+        </div>
+        <div class="row border">
+            <div class="col-4 my-auto">
+                <button type="button" class="button btn-primary d-block p-2 mb-3 mx-auto rounded-pill w-50"
+                    id="btn12">append</button>
+            </div>
+            <div class="col-8 my-3">
+                <h2 class="ms-5">append</h2>
+                <div class="row div4" id="dv5">
+                    <p id="p6">This is a paragraph.</p>
+                    <p id="p7">This is another paragraph.</p>
 
+                    <ol>
+                        <li>Lista de Items 1</li>
+                        <li>Lista de Items 2</li>
+                        <li>Lista de Items 3</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row border">
+            <div class="col-4 my-auto">
+                <button type="button" class="button btn-primary d-block p-2 mb-3 mx-auto rounded-pill w-50"
+                    id="btn13">after - before</button>
+            </div>
+            <div class="col-8 my-3">
+                <h2 class="ms-5">after and before</h2>
+                <div class="row div4" id="dv4">
+                    <p id="p8">Parrafo de Prueba after and before</p>
+                    <p id="p9">Parrafo de Prueba after and before</p>
+                    <input type="text" id="inp1" value="Texto de Prueba">
+                </div>
+            </div>
+        </div>
+        <div class="row border">
+            <div class="col-4 my-auto">
+                <button type="button" class="button btn-primary d-block p-2 mb-3 mx-auto rounded-pill w-50"
+                    id="btn14">attr</button>
+            </div>
+            <div class="col-8 my-3">
+                <h2 class="ms-5">modificacion de atributos por attr</h2>
+                <div class="row div4" id="dv4">
+                    <input type="text" id="inp2" value="Texto de Prueba">
+                    <a href="http://google.com" target="_blank">google.com</a>
                 </div>
             </div>
         </div>
