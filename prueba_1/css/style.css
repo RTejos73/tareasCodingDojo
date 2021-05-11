@@ -1,0 +1,147 @@
+#container {
+    background-color: black;
+    padding: 0px 20px;
+
+}
+span {
+    size: 50px;
+}
+
+#nav1 {
+    padding: 10px 25px;
+}
+
+#span-1 {
+    color: white;
+}
+
+#boton-menu {
+    background: lavender;
+    color: wheat;
+}
+
+#span-2 {
+    color: #1A95E2;
+}
+
+ul#ul-1 li a {
+    color: white;
+    padding-right: 25px;
+}
+
+
+
+ul#ul-1 li.active a:first-child {
+    color: #0d6efd;
+    /* padding-right: 25px; */
+}
+
+#principal {
+    background-color: white;
+    padding: 10px;
+}
+
+
+#img-1 {
+    width: 100%;
+    background-color: white;
+    background-size: cover;
+    padding: 10px;
+}
+
+#caja-1, #caja2, #caja-3 {
+    background-color: grey;
+}
+
+#section {
+    background-color: white;
+    padding: 5px 10px;
+}
+
+.fila1 {
+    display: inline-block;
+    padding-top: 5px;
+}
+#img-icon {
+    width: 15%;
+    /* height: 250px; */
+    /* margin-left: 50px; */
+    background-size: 100% 100%;
+}
+.cajas {
+    background-color: #1468A8;
+    margin: 5px;
+}
+.cajas p {
+    color: white;
+    align-items:unset;
+}
+
+h4 {
+    color: white;
+}
+
+.botones-centrales {
+    margin: 0px 0px 20px 50px;
+}
+
+#botones {
+    background-image: linear-gradient(top, #5eb5dd, #2079b0);
+}
+.fila2 {
+    height: 50px;
+}
+
+.parrafo {
+    padding: 5px;
+    height: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:15px;
+    font-weight: bold;
+}
+
+#img-edificio {
+    width: 100%;
+    border: 0px;
+    height: 250px;
+}
+
+
+.cajas2 {
+    background-color: white;
+}
+
+.titulo-1 {
+    font-family:'Times New Roman', Times, serif;
+}
+.parrafo1 {
+    height: 215px;
+}
+.letra {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+}
+
+#spann {
+    background-color: #DAEDFF ;
+    padding: 25px 15px;
+    font-size: 20px;
+    height: 200px;
+    font-style: italic;
+}
+.foter1{
+    background-color: #DAEDFF;
+}
+
+.foter {
+    padding-top: 15px;
+    background-color: #DAEDFF;
+    display: inline-block;
+    color: #5789AD;
+    align-items: center;
+    padding: 15px 20px;
+    /* width: 20%; */
+    height: 50px;
+    /* vertical-aling:middle; */
+}
+
