@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <title>jQuery for Forms </title>
+
+    <script>
+
+
+
+        $(document).ready(function () {
+            $('#form1').submit(function () {
+                console.log($(this).serialize());
+                return false;
+            });
+
+            $('.btn').click(function () {
+                $('#form1').submit();
+            });
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <form id="form1" action="proceso.php" method="POST">
+        <fieldset>
+            <label for="nombre" </label>Nombre Mascota</label><br><br>
+            <input type="text" name="nombre">
+        </fieldset>
+        <fieldset>
+            <label for="tipo">Tipo de Mascota</label><br><br>
+            tipo <select name="tipo" id="tipo" required>
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="Hamster">Hamster</option>
+                <option value="pajaro">Pajaro o Ave</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="raza">Raza</label><br><br>
+            <input type="text" name="raza">
+        </fieldset>
+        <fieldset>
+            <label for="edad">Edad</label><br><br>
+            <input type="number" name="edad">
+        </fieldset>
+        <fieldset>
+            <label for="nombreD">Nombre Dueño</label><br>
+            <input type="text" name="nombreD" required>
+        </fieldset>
+        <fieldset>
+            <label for="rutD">Rut Dueño</label><br>
+            <input type="text" name="rutD">
+        </fieldset>
+        <fieldset>
+            <button type="submit" value="enviar">Enviar</button>
+        </fieldset>
+
+        <button class="btn">Click aqui para enviar form de otra manera</button>
+
+    </form>
+</body>
+
+</html>
