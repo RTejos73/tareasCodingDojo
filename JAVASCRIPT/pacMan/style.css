@@ -25,24 +25,25 @@ div.brick {
 div.coin {
     background: url(coin.gif) no-repeat center; 
 }
-div.igual {
-    content: "=";
-    /* position: absolute; */
-    /* background-size: cover; */
-    color:  blue;
+div.cereza {
+    background: url(cereza.gif) no-repeat center;
+    background-size: cover;
+    
 }
 div.ghost {
     background: url(ghost.gif) no-repeat center;
     background-size: cover;
 }
-div.energyzer:after {
-    content: ".";
-    position: absolute;
-    font-size: 120px;
+div.energyzer {
+    /* content: "."; */
+    background: url(ficha.png);
+    /* position: absolute; */
+    /* font-size:30px; */
+    /* background-size: cover; */
     color: white;
-    margin-left: 10px;
-    top: -28px;
-    left: 20px;
+    /* margin-left: 10px; */
+    /* top: -28px; */
+    /* left: 20px; */
 }
 
 /* div.empty {
@@ -65,6 +66,17 @@ div#score   {
     padding: 7px;
     position: absolute;
     top: 22px;
+    left: 600px
+}
+
+div#vida   {
+    border: 1px solid white;
+    width: 65px;
+    height: 20px;
+    color: white;
+    padding: 7px;
+    position: absolute;
+    top: 62px;
     left: 600px
 }
 

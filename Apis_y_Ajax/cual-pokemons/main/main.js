@@ -17,9 +17,9 @@ $(document).ready(function () {
             $('#hijo2').show();
             var laid = this.id;
             let laimg = url1 + laid +'.png';
-            console.log(laimg);
+            // console.log(laimg);
             $.get(url2+ this.id, function (res) {
-                console.log(res);
+                // console.log(res);
                 $('#nombre').html(res.name);
                 $('#id_img').attr("src",laimg);
                 $('#tipo').html(res.types[0].type.name);
@@ -27,8 +27,6 @@ $(document).ready(function () {
                 $('#peso').html(res.weight);
                 // console.log(res);
             }, "json");
-
-
         });
 
 
