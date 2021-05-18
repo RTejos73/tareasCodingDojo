@@ -1,9 +1,12 @@
 $(document).ready(function () {   
-
-        salida = '\n<div>\n';
+    $('#hijo2').hide();
+        let salida = '\n<div>\n';
+        const url1 = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/';
+        const url2 = 'http://pokeapi.co/api/v2/pokemon/';
 
         for (var i = 1; i <= 151; i++) {
-            salida += "<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + i + ".png' id='"+i+"' class='la_img' alt='pokemon'>";
+            salida += "<img src="+url1+i+".png id='"+i+"' class='la_img' alt='pokemon'>";
+            // console.log(salida);
         };
         salida += '</div>';
         salida2 = '<h4>hola</h4>';
@@ -11,17 +14,18 @@ $(document).ready(function () {
 
     
         $('.la_img').click(function() {
+            $('#hijo2').show();
             var laid = this.id;
-            // alert(this.id);
-            // console.log($(this).attr(mi_id));
-            // console.log(this.mi_id);
-            $.get("http://pokeapi.co/api/v2/pokemon/"+ this.id, function (res) {
-                $('#nombre').html(res.species.name);
-                $('#id_img').attr("src","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + laid + ".png");
+            let laimg = url1 + laid +'.png';
+            console.log(laimg);
+            $.get(url2+ this.id, function (res) {
+                console.log(res);
+                $('#nombre').html(res.name);
+                $('#id_img').attr("src",laimg);
                 $('#tipo').html(res.types[0].type.name);
                 $('#altura').html(res.height);
                 $('#peso').html(res.weight);
-                console.log(res);
+                // console.log(res);
             }, "json");
 
 
