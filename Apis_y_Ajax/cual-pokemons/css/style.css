@@ -1,0 +1,28 @@
+.padre {
+  width: 1000px;
+  display: inline-block;
+}
+#hijo1 {
+  width: 700px;
+  display: inline-block;
+}
+#hijo2 {
+  width: 280;
+  height: 450px;
+  border: 15px solid red;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tarjeta {
+  width: 250px;
+  height: 430;
+  /* background-color: green; */
+  align-content: center;
+}
+
+#id_img {
+  width: 100px;
+  margin: 0px;
+  padding: 0px;
+}
