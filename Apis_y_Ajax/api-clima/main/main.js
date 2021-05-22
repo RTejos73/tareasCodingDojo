@@ -74,7 +74,7 @@ $(document).ready(function() {
                 $('#label_coor').html('Coordenadas : Latitud '+coor_x +", Longitud : "+coor_y);
                 $('#label_humedad').html('Humedad : ' + humedad + '%');
                 $('#label_nubes').html('Estado del cielo : ' + nubes);
-                $('#map').css('heigth','500px');
+                // $('#map').css('heigth','500px');
                 var map = new GMaps({
                     el: '#map',
                     lat: coor_x,
@@ -83,13 +83,25 @@ $(document).ready(function() {
         
                 map.addMarker({
                     lat: coor_x,
+                    // lat :-36.79073748204036,
                     lng: coor_y,
+                    // lng : -73.08569433004345,
                     title: ciu
                 });
-                map.setZoom(8);
+                map.setZoom(12);
             }, "json");
             return;
     }
+    // -36.79073748204036, -73.08569433004345
 
 
 });
+
+
+
+
+// {"enlaces":[
+//     {"label":"google com", "url":"http://www.google.com"},
+//     {"label":"jQuery", "url":"http://www.jquery.com"},
+//     {"label":"google cl", "url":"http://www.google.cl"}
+// ]}
