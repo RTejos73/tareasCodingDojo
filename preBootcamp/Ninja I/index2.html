@@ -1,0 +1,72 @@
+<html>
+  <body>
+    <div id="background">
+      <div
+        id="character" style="
+          position: absolute;
+          top: 300px;
+          left: 300px;
+          background-image: url('img/down1.png');
+          width: 59px;
+          height: 86px; "
+      ></div>
+    </div>
+    <script type="text/javascript">
+      var leftValue = 300;
+      var topValue =300;
+      var direction = 'down',pie = 2;
+
+      function update() {
+        document.getElementById("character").style.left = leftValue + "px";
+        document.getElementById("character").style.top = topValue + "px";
+        document.getElementById("character").style.backgroundImage = "url('img/"+direction+pie+".png')";
+      }
+      function f_pie(a){
+          if(a == 1){
+              a = 2;
+          }else {
+              a = 1;
+          }
+          return a;
+      }
+
+      document.onkeydown = function (e) {
+        //console.log("e : "+e);
+        //console.log("e.keyCode "+e.keyCode);
+        // IZQUIERDA
+        if (e.keyCode == 37 && leftValue > 0) {
+          direction = "left";
+          pie = f_pie(pie);
+          leftValue -= 10;
+          //console.log("izq "+leftValue + " " + topValue);
+          //console.log(direction + pie);
+        } 
+        //DERECHA
+        else if(e.keyCode == 39 && leftValue < 500){
+          leftValue +=10;
+            direction = "right";
+            pie = f_pie(pie);
+          //console.log("izq "+leftValue + " " + topValue);
+        }
+        // ARRIBA
+        else if(e.keyCode == 38 && topValue > 0){
+          topValue -=10;
+          direction = "top";
+          pie = f_pie(pie);
+          //console.log("izq "+leftValue + " " + topValue);
+        }
+        // ABAJO
+        else if(e.keyCode == 40 && topValue < 500){
+          topValue +=10;
+          direction = 'down';
+          pie = f_pie(pie);
+          //console.log("izq "+leftValue + " " + topValue);
+        }
+        update();
+      };
+      /*
+        Ahora adjunto el codigo arreglado, ya no presenta errores;
+      */
+    </script>
+  </body>
+</html>
