@@ -1,0 +1,13 @@
+use twitter;
+
+select * from users;
+select * from tweets;
+select * from faves;
+
+INSERT INTO users (first_name, last_name, handle, birthday, created_at, updated_at) 
+	VALUES ("Tracy", "McGrady","Real_T_Mac","1979-05-24", now(), now());
+    
+DELETE FROM users where id = 6;
+
+UPDATE users SET birthday = "1989-04-22" where id = 4;
+UPDATE users SET handle = "We handle the antiques with great care" where id = 7;
