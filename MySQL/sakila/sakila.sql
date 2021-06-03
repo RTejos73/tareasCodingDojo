@@ -1,3 +1,5 @@
+USE sakila;
+
 -- 1
 select cu.first_name, cu.last_name, cu.email, ad.address from city ci
 INNER JOIN address ad ON ci.city_id = ad.city_id
@@ -36,17 +38,25 @@ INNER JOIN actor ac ON ac.actor_id = fa.actor_id
 WHERE fi.film_id = 369;
 
 -- 7
-select fi.film_id, fi.title, fi.description, fi.release_year, fi.rating, fi.special_features, ca.name, fi.rental_rate  from film fi
+select fi.film_id, fi.title,  fi.description, fi.release_year, fi.rating, fi.special_features, ca.name, fi.rental_rate  from film fi
 inner join film_category fc ON fi.film_id = fc.film_id
 inner join category ca ON fc.category_id = ca.category_id
 where ca.name like '%drama%' and fi.rental_rate = '2.99';
 
 -- 8
-select ac.actor_id, fi.film_id, fi.title, fi.description, fi.release_year, fi.rating, fi.special_features, ca.name, concat(ac.first_name,' ',ac.last_name) AS 'Nombre del Actor' from film fi
-inner join film_category fc ON fi.film_id = fc.film_id
-inner join category ca ON fc.category_id = fc.category_id
-inner join film_actor fa on fa.film_id = fi.film_id
-inner join actor ac ON ac.actor_id = fa.actor_id
-where  ca.name = 'Action' and ac.first_name like '%Sandra%' and ac.last_name like '%kilmer%';
+select ac.actor_id, fi.film_id, fi.title, ca.name, fi.description, fi.release_year, fi.rating, fi.special_features, ca.name, concat(ac.first_name,' ',ac.last_name) AS 'Nombre del Actor'
+ from film fi
+left join film_category fc ON fi.film_id = fc.film_id
+left join category ca ON fc.category_id = ca.category_id
+left join film_actor fa on fa.film_id = fi.film_id
+left join actor ac ON ac.actor_id = fa.actor_id
+where  ca.name = 'Action' and ac.first_name like 'Sandra' and ac.last_name like 'kilmer';
 
+
+select * from film_actor where film_id = 6;
+
+select * from film_category where film_id = 6;
+
+select * from category where category_id = 9;
+select * from actor where last_name = 'kilmer'
 
