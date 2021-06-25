@@ -1,8 +1,28 @@
-import java.util.ArrayList;
+
 
 public class PortFolio {
 
-	ArrayList<Object> projects = new ArrayList<Object>();
+	
+	
+
+	
+	
+
+	
+	public double getPortfolioCost() {
+		
+		
+		return 1.0;
+	}
+	
+	public String showPorfolio() {
+		
+		
+		
+		return "";
+	}
+	
+	
 	
 	
 	

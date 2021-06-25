@@ -63,6 +63,12 @@ public class Project {
 				
 		return nombre + "  (" + initialCost + ")  : " + descripcion;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Projecto [nombre= " + nombre + ", descripcion= " + descripcion + ", Costo Inicial= " + initialCost + " UF]\n";
+	}
 	
 	
 
