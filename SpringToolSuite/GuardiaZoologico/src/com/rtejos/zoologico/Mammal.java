@@ -1,4 +1,4 @@
-package com.ftejos.zoologico;
+package com.rtejos.zoologico;
 
 public class Mammal {
 	
