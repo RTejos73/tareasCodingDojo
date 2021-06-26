@@ -1,18 +1,12 @@
 
 public class Node {
-	 public int value;
 	 
-	    public Node next;
-	    
-	    public Node(int value) {
-	        // su codigo aqui
-	    	this.value = value;
-			this.next = null; 
-
-	    }
-	    
-		public Node() {
-			
-		}
-
+	public int value;
+	public Node next;
+	
+	//constructor
+	public Node(int value) {
+		this.value = value;
+		this.next = null;
+	}
 }
