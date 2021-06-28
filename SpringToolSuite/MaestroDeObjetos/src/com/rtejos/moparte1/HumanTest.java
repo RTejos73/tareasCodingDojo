@@ -12,6 +12,9 @@ public class HumanTest {
 		Ninja n1 = new Ninja("Ninja");
 		Samurai s1 = new Samurai("Samurai");
 
+//		System.out.println();
+//		System.out.println(w1.intelligence);
+
 		int op = 0;
 		String menu = "";
 		do {
@@ -100,16 +103,16 @@ public class HumanTest {
 					}
 					break;
 				}
+				System.out.println(atacante + " ha atacado a " + atacado);
+				System.out.println("La vida de " + atacado + " es de " + vidaatacado);
 				break;
 			case 2:
 				op = 2;
 				break;
-			default :
+			default:
 				op = 2;
 				break;
 			}
-			System.out.println(atacante + " ha atacado a " + atacado);
-			System.out.println("La vida de " + atacado + " es de " + vidaatacado);
 		} while (op != 2);
 
 //		int seleccion1 = JOptionPane.showOptionDialog(

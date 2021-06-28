@@ -17,9 +17,8 @@ public class Human {
 	}
 	
 	
-	public int attack(int ptos) {		
-		health = health - ptos;		
-		return health;		
+	public int attack(int ptos) {
+		return this.health - ptos;		
 	}
 	
 	public int dispalyHealth() {
