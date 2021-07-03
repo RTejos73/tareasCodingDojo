@@ -8,9 +8,8 @@ public class BatTest{
 	public static void main(String[] args) {
 		
 		Bat bat1 = new Bat();
-		int actual;
 		
-		
+		System.out.println(bat1.displayEnergy() + "\n");
 		
 		bat1.fly();
 		bat1.fly();
@@ -18,13 +17,8 @@ public class BatTest{
 		bat1.attackTown();
 		bat1.attackTown();
 		bat1.eatHumans();
-		bat1.attackTown();
-		
-		
-		actual = bat1.displayEnergy();
-		System.out.println(actual + "\n");
-		
-		
+		bat1.attackTown();	
+		System.out.println(bat1.displayEnergy() + "\n");
 	}
 
 }
