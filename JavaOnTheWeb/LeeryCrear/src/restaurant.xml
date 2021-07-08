@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menuPrincipal>
+	<menuDesayuno>
+		<opcion1>
+			<nombre>Desayuno Ingles</nombre>
+			<contenido>
+				Huevos fritos, alubias, champiñones, salchichas pequeñas y tomate a la plancha. Este también incluye tostadas, café o té y zumo.
+			</contenido>
+			<precio>$2500</precio>
+		</opcion1>
+		<opcion2>
+			<nombre>Desayuno Amerincao</nombre>
+			<contenido>
+				Dos huevos, beicon, salchichas pequeñas, panqueques y salsa de arce. Este también incluye tostadas, café o té y zumo. 
+				Con la leche también se pueden tomar cereales.
+			</contenido>
+			<precio>$3000</precio>
+		</opcion2>	
+		<opcion3>
+			<nombre>Desayuno Continental</nombre>
+			<contenido>
+				tostadas, mermelada, café o té y zumo. En su versión más abundante, también puede incluir platos calientes como huevos revueltos, 
+				salchichas y sopas de leche.
+			</contenido>
+			<precio>$2800</precio>
+		</opcion3>	
+		<opcion4>
+			<nombre>Desayuno Vienes</nombre>
+			<contenido>
+				huevos cocidos en un vaso, panecillos, un plato de carne, mermelada o miel, y café con crema o té, zumo o agua.
+			</contenido>
+			<precio>$3500</precio>
+		</opcion4>	
+	</menuDesayuno>
+	<menuCena>
+		<opcion1>
+			<nombre>Risotto de Calabaza</nombre>
+			<contenido>
+				Arroz, zapallo, sal
+			</contenido>
+			<precio>$5000</precio>
+		</opcion1>
+		<opcion2>
+			<nombre>Sopa de Caracol</nombre>
+			<contenido>
+				Sal, ajo, fideos, varios
+			</contenido>
+			<precio>$1290</precio>
+		</opcion2>
+	</menuCena>
+
+	<web-app>
+	    <display-name>SimpleServletProject</display-name>
+	    <!--   nombre del proyecto servlet-->
+	    
+	    <servlet>
+	        <servlet-name>simpleServlet</servlet-name>
+	        <servlet-class>org.codingdojo.tutorial.SimpleServlet</servlet-class>
+	        <!--    -->
+	    </servlet>
+	    
+	    <servlet-mapping>
+	        <servlet-name>simpleServlet</servlet-name>
+	        <url-pattern>/simpleServlet</url-pattern>
+	    </servlet-mapping>
+	    
+	    <servlet>
+	        <servlet-name>xmlServlet</servlet-name>
+	        <servlet-class>or.codingdojo.tutorial.XmlServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+	        <servlet-name>xmlServlet</servlet-name>
+	        <url-pattern>/xmlServletpath</url-pattern>
+	    </servlet-mapping>
+	    <!--    especifica un patrón de URL y el nombre de un servlet declarado para usar en solicitudes cuyas URL coincidan con el patrón -->
+	    
+	    <welcome-file-list>
+	    <welcome-file>index.html</welcome-file>
+	    <!-- nombre del archivo xml -->
+	    </welcome-file-list>
+	</web-app>
+</menuPrincipal>
