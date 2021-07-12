@@ -2,26 +2,18 @@ package com.rtejos.calculadora;
 
 public class Calculator implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	double firstNumber;
 	double secondNUmber;
-	String operator;
+	String operator = "";
 	
 	public Calculator() {
 		
 	}
 	
 	
-	public Calculator(double primerNumero, double segundoNumero, String operador) {
-		this.firstNumber = primerNumero;
-		this.secondNUmber = segundoNumero;
-		this.operator = operador;				
-	}
-	
-	
+		
 	public String performOperation() {
 		
 		
@@ -31,32 +23,34 @@ public class Calculator implements java.io.Serializable {
 	
 	public double getResult(Calculator calcular) {
 		
-		double primero = calcular.getFirstNumber();
-		double segundo = calcular.getSecondNUmber();
-		String operador = calcular.getOperator();
-		double resultado;
+		double respuesta = 0;
 		
-		switch(operador) {
-		
-		case "+" :
-				resultado = primero + segundo;
-				break;
+		if(calcular.operator.equalsIgnoreCase("+")) {
 			
-		case "-" :
-				resultado = primero - segundo;
-				break;
-		case "*" :
-				resultado = primero * segundo;
-				break;
-		case "/" :
-				resultado = primero / segundo;
-				break;
-		default :
-				resultado = 0.0;
-				break;
-		}
+			respuesta = calcular.getFirstNumber() + calcular.getSecondNUmber();	
+			
+		}else if (calcular.operator.equalsIgnoreCase("-")) {
+			
+			respuesta = calcular.getFirstNumber() - calcular.getSecondNUmber();	
+			
+		}else if (calcular.operator.equalsIgnoreCase("*")) {			
+			
+			respuesta = calcular.getFirstNumber() * calcular.getSecondNUmber();
+			
+		}else if (calcular.operator.equalsIgnoreCase("/")) {
+			
+			if(calcular.getSecondNUmber() == 0) {
+				System.out.println("\nNo se Puede dividir por 0");
+				respuesta = 0;
+				
+			}else {
+				
+				respuesta = calcular.getFirstNumber() / calcular.getSecondNUmber();
+				
+			}
+		}		
 		
-		return resultado;
+		return respuesta;
 		
 	}
 	
