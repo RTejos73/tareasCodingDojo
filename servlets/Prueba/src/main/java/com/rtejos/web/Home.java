@@ -2,6 +2,7 @@ package com.rtejos.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +22,7 @@ public class Home extends HttpServlet {
      */
     public Home() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
 	/**
@@ -34,7 +35,7 @@ public class Home extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.write("hello word");
 		// obtener parametros desde la url
-		String todo = request.getParameter(null);
+
 		String userName = request.getParameter("name");
 		String userApe = request.getParameter("apellido");
 		response.setContentType("text/html");
