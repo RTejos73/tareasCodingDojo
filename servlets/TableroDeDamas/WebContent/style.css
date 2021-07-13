@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.uno {
+	margin: 0px;
+	padding :0px;
+	height : 100px;
+	background : violet;
+	display : inline-block;
+}
+.dos {
+	margin :0px;
+	padding :0px;
+	height : 100px;
+	background : blue;
+	display : inline-block;
+}
+
+
+
+@media only screen and (min-width: 480px){
+    .col {
+        height: 50px;
+    }
+}
+@media only screen and (min-width: 750px){
+    .col {
+        height: 75px;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .col {
+        height: 100px;
+    }
+}

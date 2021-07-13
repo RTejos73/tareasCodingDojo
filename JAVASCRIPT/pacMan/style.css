@@ -16,10 +16,11 @@ div.row div {
     height: 30px;
     /* border: 1px solid black; */
     display: inline-block;
+
 }
 
 div.brick {
-    background-color: blue;
+    background-color: blue ;
 }
 
 div.coin {

@@ -36,7 +36,7 @@ public class CalculatorTest {
 		String aa = "";
 		CalculatorII calculadora2 = new CalculatorII();
 		
-		int opcion;
+		int opcion=0;
 	//	do {
 			
 			String menu = "***********************************\n";
@@ -49,11 +49,11 @@ public class CalculatorTest {
 			menu += "***********************************\n";
 			
 			System.out.println(menu);	
-			if(scan1.hasNextInt()) {
+			//if(scan1.hasNextInt()) {
 				 opcion = scan1.nextInt();
-			}else {
-				opcion = 0;
-			}
+		//	}else {
+			//	opcion = 0;
+			//}
 		
 			if(opcion == 1) {
 				aa = calculadora2.getOperations2();
@@ -61,7 +61,7 @@ public class CalculatorTest {
 				aa = calculadora2.getOperations1();
 			}
 			
-		//} while(opcion != 3);
+	//	} while(opcion != 3);
 		scan1.close();
 		
 		System.out.println(aa);
