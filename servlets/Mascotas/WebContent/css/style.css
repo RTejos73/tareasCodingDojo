@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+.row1{
+	display : inline-block;
+	border : 0px;
+	margin-bottom : 10px;
+	width : 50%;
+	
+}
+
+.uno {
+	
+	border : 2px solid blue;
+}
