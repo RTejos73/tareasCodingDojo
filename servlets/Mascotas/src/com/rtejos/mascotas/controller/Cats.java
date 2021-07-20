@@ -28,19 +28,41 @@ public class Cats extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String nameCats = request.getParameter("name");
-		String breedCats = request.getParameter("breed");
-		double weightCats = Double.parseDouble(request.getParameter("weight"));
+		String nameCats;
+		String breedCats;
+		double weightCats = 0.0;
 		
-		Cat cat = new Cat();
 		
-		cat.setName(nameCats);
-		cat.setBreed(breedCats);
-		cat.setWeight(weightCats);		
-		cat.showAffection();
+		// seteo variables recibidas desde la url por metodo get
+		if(request.getParameter("name") == null) {
+			nameCats = "empyti";
+		} else {
+			nameCats = request.getParameter("name");
+		}
 		
-		request.setAttribute("theCats", cat);
-		request.getRequestDispatcher("/WEB-INF/view/cat.jsp").forward(request, response);
+		if(request.getParameter("breed") == null) {
+			breedCats = "empyti";
+		} else {
+			breedCats = request.getParameter("breed");
+		}
+		
+		if(request.getParameter("weight").isEmpty()) {
+			weightCats = 0.0;
+		} else {
+			weightCats = Double.parseDouble(request.getParameter("weight"));
+			
+		}
+		
+	
+		Cat gato = new Cat();
+		
+		gato.setName(nameCats);
+		gato.setBreed(breedCats);
+		gato.setWeight(weightCats);		
+		gato.showAffection();
+		
+		request.setAttribute("theCats", gato);
+		request.getRequestDispatcher("/WEB-INF/view/dog.jsp").forward(request, response);
 	}
 
 	/**

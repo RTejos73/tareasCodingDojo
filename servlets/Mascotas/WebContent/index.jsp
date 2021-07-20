@@ -6,8 +6,8 @@
 	<meta charset="ISO-8859-1">
 	<title>Veterinaria</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row1">
 			<div class="col uno">
-				<form action="dogs" method="get" class="form-horizontal">
+				<form action="dogs" method="get" >
 					<fieldset>
 						<legend>Formulario Dogs</legend>							
 							<div class="col">
@@ -43,7 +43,7 @@
 		<hr style="border:2px;">
 		<div class="row1">
 			<div class="col uno">
-				<form action="cats" method="get" class="form-horizontal">
+				<form action="cats" method="get" >
 					<fieldset>
 						<legend>Formulario Cats</legend>							
 							<div class="col">

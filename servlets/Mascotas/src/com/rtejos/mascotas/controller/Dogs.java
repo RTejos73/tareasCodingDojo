@@ -28,11 +28,31 @@ public class Dogs extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nameDogs;
+		String breedDogs;
+		double weightDogs = 0.0;
+		
 		
 		// seteo variables recibidas desde la url por metodo get
-		String nameDogs = request.getParameter("name");
-		String breedDogs = request.getParameter("breed");
-		double weightDogs = Double.parseDouble(request.getParameter("weight"));		
+		if(request.getParameter("name") == null) {
+			nameDogs = "empyti";
+		} else {
+			nameDogs = request.getParameter("name");
+		}
+		
+		if(request.getParameter("breed") == null) {
+			breedDogs = "empyti";
+		} else {
+			breedDogs = request.getParameter("breed");
+		}
+		
+		if(request.getParameter("weight").isEmpty()) {
+			weightDogs = 0.0;
+		} else {
+			weightDogs = Double.parseDouble(request.getParameter("weight"));
+			
+		}
+		
 	
 		Dog perro = new Dog();
 		
