@@ -28,7 +28,7 @@ public class Random extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int contador = 0;
+		int contador = 1;
 		HttpSession session = request.getSession();
 		if(session.getAttribute("aleatorio") == null) {
 			session.setAttribute("aleatorio", contador);			
