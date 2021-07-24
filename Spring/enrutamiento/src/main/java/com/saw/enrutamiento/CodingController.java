@@ -3,7 +3,6 @@ package com.saw.enrutamiento;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/coding")
 public class CodingController {

@@ -1,13 +1,13 @@
-package com.saw.enrutamiento;
+package com.rtejos.parametros;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EnrutamientoApplication {
+public class ParametrosDeConsultaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EnrutamientoApplication.class, args);
+		SpringApplication.run(ParametrosDeConsultaApplication.class, args);
 	}
-	
+
 }
