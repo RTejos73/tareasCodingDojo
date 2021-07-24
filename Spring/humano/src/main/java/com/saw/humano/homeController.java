@@ -9,11 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class homeController {
 	
 	@RequestMapping("/")
-	public String index(@RequestParam(value="q", required=false) String searchQuery) {
-		if(searchQuery == null) {
+	public String index(@RequestParam(value="nombre", required=false) String parametroNombre, 
+						@RequestParam(value="apellido", required=false) String parametroApellido) {
+		if(parametroNombre == null && parametroApellido == null) {
 			return "Hola Humano!";
-		}else {
-			return "Hola  " + searchQuery;
-		}
+		}else if(parametroNombre != null && parametroApellido != null ) {
+			return "Hola " + parametroNombre + " " + parametroApellido;
+		} else if (parametroNombre != null && parametroApellido == null) {
+			return "Hola " + parametroNombre;					
+		} else  {
+			return "Hola " + parametroApellido;
+		} 
 	}	
 }
