@@ -1,3 +1,11 @@
-h1 {
+#azul {
 	color : blue;
+}
+
+#verde {
+	color : green;
+}
+
+.centrar {
+	text-align : center;
 }

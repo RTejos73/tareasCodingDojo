@@ -18,19 +18,8 @@
 
 	<div class="container">
 		<div class="row mt-5">
-			<div class="col-6">
-				<%
-					Date fecha = new Date();
-					SimpleDateFormat formato = new SimpleDateFormat("EEEEEEE, d ' de ' MMMM, yyyy");
-				//	String eldia = Integer.parseInt(formato.format(fecha).toString());
-				//	Integer elmes = fecha.getMonth();
-				//	Integer elanio = fecha.getYear();
-				
-					String lagranfecha = formato.format(fecha).toString();
-					
-				%>
-				<h1><c:out value="<%=lagranfecha %>"> </c:out></h1>
-		
+			<div class="col-6 centrar">				
+				<h1 id="azul"><c:out value="${fechaDate}"> </c:out></h1>
 			</div>
 		</div>
 	</div>

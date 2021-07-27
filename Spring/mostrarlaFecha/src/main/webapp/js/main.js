@@ -4,5 +4,5 @@ function alerta1() {
 }
 
 function alerta2() {
-	alert("Esta es la plantilla de Hora Actial");
+	alert("Esta es la plantilla de Hora Actual");
 }
