@@ -15,7 +15,7 @@ public class HomeController {
 		}else {
 			return "Tu parametro de busqueda fue : " + parametroBusqueda ;
 		}
-	}
+}
 	
 	
 	

@@ -5,16 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.0</version>
+		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.saw.firstproject</groupId>
-	<artifactId>firstproject</artifactId>
+	<groupId>com.rtejos.fecha</groupId>
+	<artifactId>mostrarlaFecha</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>firstproject</name>
-	<description>Demo project for Spring Boot</description>
+	<packaging>war</packaging>
+	<name>mostrarlaFecha</name>
+	<description>tarea Mostrar la Fecha</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -22,6 +23,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
