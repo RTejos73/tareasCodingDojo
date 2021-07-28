@@ -1,5 +1,7 @@
 package com.saw.firstproject;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,11 @@ public class FirstprojectApplication {
 		return "Hello World";
 	}
 	
+	
+	public void index(HttpSession session) {
+		session.setAttribute("count", 1);
+		Integer count = (Integer) session.getAttribute("count");
+	}
 	
 
 }
