@@ -1,8 +1,8 @@
 package com.rtejos.gnumber.controller;
 
 import java.io.IOException;
-import java.util.Random;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,11 +28,21 @@ public class Adivinar extends HttpServlet {
     
     public int Aleatorio() {
     	int alea2 = (int)Math.floor(Math.random()*(100-1)+1);
-    	
-		return	alea2;			
-
-    	
-    }
+    	return	alea2;	
+}
+    
+    public String validateNumber(int randomNumber, int userNumber) {
+		String validator = "";
+		if ( randomNumber < userNumber ) {
+			validator = "Too high!";
+		}else if ( randomNumber > userNumber ) {
+			validator = "Too low!";
+		}else {
+			validator = randomNumber + " was the number";
+		}
+		System.out.println(validator);
+		return validator;
+	}
     
     
 
@@ -57,20 +67,39 @@ public class Adivinar extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		if(session.getAttribute("numeroElegido") == null) {
-			
-  //esto si 			
+			int difficult = Integer.parseInt(request.getParameter("difficult"));
 			session.setAttribute("numero", userNumber );
 			numeroAleatorio = (int) Aleatorio();
 			session.setAttribute("numeroAleatorio", numeroAleatorio);
-			
-			
+			session.setAttribute("difficult", difficult);
+			session.setAttribute("attemps", intentos);			
 		}else {
 			numeroAleatorio = (int) session.getAttribute("numeroAleatorio");
-			session.setAttribute("numeroAleatorio", userNumber);
-		
+			session.setAttribute("numeroAleatorio", userNumber);		
+			int temp = (int) session.getAttribute("attemps");
+			temp++;
+			session.setAttribute("attemps", temp);
 		}
+		System.out.println(numeroAleatorio);
+		System.out.println(session.getAttribute("difficult"));
+		System.out.println(session.getAttribute("attemps"));
 		
-		
+		if ( (int) session.getAttribute("attemps") == (int) session.getAttribute("difficult") ) {	
+			session.setAttribute("attemps", null);
+			session.setAttribute("difficult", null);
+			session.setAttribute("userNumber", null);
+			session.setAttribute("randomNumber", null);
+			session.invalidate();
+		} else {
+			int userNumberSession = (int) session.getAttribute("number");
+			
+			session.setAttribute("randomNumber", numeroAleatorio);
+			String validator = (String) validateNumber(numeroAleatorio , userNumberSession);
+			session.setAttribute("validator", validator);
+			
+			RequestDispatcher rq = request.getRequestDispatcher("index.jsp");
+			rq.forward(request, response);	
+		}
 		
 		
 		

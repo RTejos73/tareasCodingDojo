@@ -1,0 +1,12 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+#feedback {
+	width: 128px;
+	height: 128px;
+	background-color: red;
+	display: block;
+	border: 2px solid black;
+}
