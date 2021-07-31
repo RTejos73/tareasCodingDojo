@@ -19,7 +19,7 @@ public class FechaController {
 	@RequestMapping("/date")
 	public String laFecha(Model model) {
 		Date fecha = new Date();
-		SimpleDateFormat formato = new SimpleDateFormat("EEEEEEE, 'the ' d ' of ' MMMM, yyyy");
+		SimpleDateFormat formato = new SimpleDateFormat("EEEEEEE, 'the ' d ' of ' MMMM, yyyy HH:mm a");
 		String lagranfecha = formato.format(fecha).toString();
 		model.addAttribute("fechaDate", lagranfecha);
 		return "dateTemplate.jsp";
