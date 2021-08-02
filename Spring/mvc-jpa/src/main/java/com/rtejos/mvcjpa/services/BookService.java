@@ -48,20 +48,21 @@ public class BookService {
 		
 	}
 
-	public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
+	public Book updateBooks(Long id, String title, String desc, String lang, Integer numOfPages) {
 		Book libro = new Book();
 		libro.setId(id);
 		libro.setTitle(title);
 		libro.setNumberOfPages(numOfPages);
 		libro.setDescription(desc);
-		libro.setLanguage(lang);
-		
+		libro.setLanguage(lang);		
 		bookRepoInterface.save(libro);
-		
-		
-		
-		
 		return null;
 	}
+	
+	public Book updateBook(Book libro) {
+		bookRepoInterface.save(libro);
+		return null;
+	}
+	
 	
 }

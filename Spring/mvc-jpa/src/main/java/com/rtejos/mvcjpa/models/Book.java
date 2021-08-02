@@ -46,7 +46,7 @@ public class Book {
         this.numberOfPages = pages;
     }
     
-    // Otros getters y setters fueron removidos para resumir
+    
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();

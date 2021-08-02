@@ -11,5 +11,7 @@ import com.rtejos.mvcjpa.models.Book;
 public interface BookRepositoryInterfaces extends CrudRepository<Book, Long> {
 	List<Book> findAll();
 	List<Book> findByDescriptionContaining(String search);
-
+	Long countByTitleContaining(String search);
+	Long deleteByTitleStartingWith(String search);
+	
 }
