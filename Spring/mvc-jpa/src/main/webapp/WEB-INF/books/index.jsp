@@ -19,12 +19,11 @@
 			</tr>	
 		</thead>
 		<tbody>
-			<c:forEach items="${books}" var="book">
+			<c:forEach items="${lenguajes}" var="l">
 				<tr>
-					<td><c:out value="${book.title}" /></td>
-					<td><c:out value="${book.description}" /></td>
-					<td><c:out value="${book.language}" /></td>
-					<td><c:out value="${book.numberOfPages}" /></td>			
+					<td><c:out value="${l.name}" /></td>
+					<td><c:out value="${l.creator}" /></td>
+					<td><c:out value="${l.currentVersion}" /></td>		
 				</tr>
 			</c:forEach>
 		</tbody>

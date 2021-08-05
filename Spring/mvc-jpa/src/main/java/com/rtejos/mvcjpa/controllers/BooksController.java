@@ -74,12 +74,13 @@ public class BooksController {
     							 @PathVariable("id") Long id, Model model	) {
 		 if (result.hasErrors()) {
 	            return "/books/edit.jsp";
-	        } else {
+	     } else {
 	        	Book libro = bookService.findBook(id);
 	            model.addAttribute("book", libro);
 	            return "/books/show.jsp";
-	        }
+	     }
 	}
+	
 	
 	@RequestMapping(value="/books/{id}", method=RequestMethod.DELETE)
     public String destroy(@PathVariable("id") Long id) {
