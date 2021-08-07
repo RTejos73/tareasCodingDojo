@@ -7,5 +7,8 @@ import com.rtejos.lookify.Models.Song;
 
 @Repository
 public interface SongRepository extends CrudRepository<Song, Long> {
+	
+	
+	
 
 }
