@@ -21,8 +21,7 @@ public class Adivinar extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public Adivinar() {
-        super();
-        // TODO Auto-generated constructor stub
+    	
     }
     
     
@@ -50,7 +49,7 @@ public class Adivinar extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -61,7 +60,7 @@ public class Adivinar extends HttpServlet {
 		
 		int userNumber = Integer.parseInt(request.getParameter("numeroElegido"));
 		int numeroAleatorio;
-		int dificultad = Integer.parseInt(request.getParameter("dificultad"));
+		
 		int intentos = 1;
 		
 		HttpSession session = request.getSession();
@@ -102,14 +101,7 @@ public class Adivinar extends HttpServlet {
 		}
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 		String numElegido = request.getParameter("numeroElegido");
 		System.out.println(numElegido);
@@ -123,12 +115,7 @@ public class Adivinar extends HttpServlet {
 			//session.setAttribute("entrada", contador);			
 		}
 		
-		
-		
-		
-		
-		
-		
+
 		
 		if(request.getParameter("numElegido").equals(null) ) {
 			response.sendRedirect("/index.jsp");

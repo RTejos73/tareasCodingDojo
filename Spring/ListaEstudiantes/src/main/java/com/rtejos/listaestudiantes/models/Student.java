@@ -1,4 +1,4 @@
-package com.rtejos.licencias.models;
+package com.rtejos.listaestudiantes.models;
 
 import java.util.Date;
 
@@ -14,32 +14,35 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="persons")
-public class Person {
 
+@Entity
+@Table(name="students")
+public class Student {
+	
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String fisrtName;
+	private String firstName;
 	private String lastName;
+	private byte age;
 	@Column(updatable=false)
 	private Date createdAt;
 	private Date updatedAt;
-	/*
-	 * @OneToMany private Set<License> license;
-	 */
-	@OneToOne(mappedBy="person", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-    private License license;
+	@OneToOne(mappedBy="student", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+    private Contact contact;
 	
-	public Person() {
-		
+	
+	public Student() {
+	
+	}
+	
+	public Student(String firstName, String lastName, byte age) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
 	}
 
-	public Person(String fisrtName, String lastName) {
-		this.fisrtName = fisrtName;
-		this.lastName = lastName;
-	}
 
 
 
@@ -52,64 +55,75 @@ public class Person {
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
-
+	
+	
 	public Long getId() {
 		return id;
 	}
+
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getFisrtName() {
-		return fisrtName;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFisrtName(String fisrtName) {
-		this.fisrtName = fisrtName;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
+
 
 	public String getLastName() {
 		return lastName;
 	}
 
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+
+	public byte getAge() {
+		return age;
+	}
+
+
+	public void setAge(byte age) {
+		this.age = age;
+	}
+
 
 	public Date getCreatedAt() {
 		return createdAt;
 	}
 
+
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
+
 
 	public Date getUpdatedAt() {
 		return updatedAt;
 	}
 
+
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
-	public License getLicense() {
-		return license;
+
+	public Contact getContact() {
+		return contact;
 	}
 
-	public void setLicense(License license) {
-		this.license = license;
-	}
 
-	
-    
-    
-	
-	
-	
-	
-	
-	
-	
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
 	
 }

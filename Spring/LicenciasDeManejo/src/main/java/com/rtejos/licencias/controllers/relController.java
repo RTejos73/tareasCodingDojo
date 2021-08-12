@@ -32,8 +32,6 @@ public class relController {
 
 	@GetMapping("/persons/new")
 	public String muestraPersonas() {
-		
-		
 		return "/person.jsp";
 	}
 
@@ -50,7 +48,7 @@ public class relController {
 			return "person.jsp";
 		} else {
 			oneService.createPerson(person);
-			return "redirect:/persons/new";
+			return "redirect:/listado";
 		}
 	}
 	
@@ -58,9 +56,7 @@ public class relController {
 	@GetMapping("/persons/{id}")
 	public String ListPerson(@PathVariable("id") Long id, Model model) {
 		Person buscapersona = oneService.buscaPersonId(id);
-		License licenciaPersona = oneService.buscaLicenseById(id);
 		model.addAttribute("persons", buscapersona);
-		model.addAttribute("licencia", licenciaPersona);
 		return "show.jsp";
 	}
 	
@@ -127,8 +123,8 @@ public class relController {
 				
 				
 				
-				 Person buscarpersona = oneService.buscaPersonId(idPerson); License
-				 nuevaLicencia = new License(number, fechaVencimiento, state, buscarpersona);
+				 Person buscarpersona = oneService.buscaPersonId(idPerson);
+				 License nuevaLicencia = new License(number, fechaVencimiento, state, buscarpersona);
 				 
 				
 				if(result.hasErrors()) {
@@ -136,11 +132,17 @@ public class relController {
 				} else {
 					
 					oneService.creaLicencia(nuevaLicencia);
-					return "redirect:/licenses/new";
+					return "redirect:/listado";
 				}
 			}
-			
-			
+		}
+		
+		
+		@GetMapping("/listado")
+		public String index(Model model) {
+			List<Person> listadoPeronas = oneService.listarPersonas();			
+			model.addAttribute("listado", listadoPeronas);
+			return "listado.jsp";
 		}
 	
 	

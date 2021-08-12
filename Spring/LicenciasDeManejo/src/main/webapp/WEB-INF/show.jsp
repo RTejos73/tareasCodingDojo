@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="container text-aling:rigth">
 				<div>
-					<a href="/persons/new">Volver a Person </a>
+					<a href="/listado">Volver a Listado </a>
 				</div>
 			</div>
 			<div class="mt-5">
@@ -25,19 +25,19 @@
 				<br/>
 				<p>
 					License Number	: <strong>
-						<c:out value="${licencia.number}"></c:out>	
+						<c:out value="${persons.license.number}"></c:out>	
 					</strong>
 				</p>
 				<br />
 				<p>
 					State			: <strong>
-					<c:out value="${licencia.state}"></c:out>
+					<c:out value="${persons.license.state}"></c:out>
 					</strong>
 				</p>
 				<br />
 				<p>
 					Expiration Date	: <strong>
-					<c:out value="${licencia.expirationDate}"></c:out>
+					<c:out value="${persons.license.expirationDate}"></c:out>
 					</strong>
 				</p>
 				<br />

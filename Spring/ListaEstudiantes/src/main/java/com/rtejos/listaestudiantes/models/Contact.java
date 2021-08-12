@@ -1,44 +1,48 @@
-package com.rtejos.licencias.models;
+package com.rtejos.listaestudiantes.models;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name="persons")
-public class Person {
+@Table(name="contacts")
+public class Contact {
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String fisrtName;
-	private String lastName;
+	private String address;
+	private String city;
+	private String satte;
 	@Column(updatable=false)
 	private Date createdAt;
 	private Date updatedAt;
-	/*
-	 * @OneToMany private Set<License> license;
-	 */
-	@OneToOne(mappedBy="person", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-    private License license;
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="student_id")
+    private Student student;
 	
-	public Person() {
+	public Contact() {
 		
 	}
-
-	public Person(String fisrtName, String lastName) {
-		this.fisrtName = fisrtName;
-		this.lastName = lastName;
+	
+	
+	public Contact(String address, String city, String satte, Student student) {
+		super();
+		this.address = address;
+		this.city = city;
+		this.satte = satte;
+		this.student = student;
 	}
 
 
@@ -61,20 +65,28 @@ public class Person {
 		this.id = id;
 	}
 
-	public String getFisrtName() {
-		return fisrtName;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setFisrtName(String fisrtName) {
-		this.fisrtName = fisrtName;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getCity() {
+		return city;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getSatte() {
+		return satte;
+	}
+
+	public void setSatte(String satte) {
+		this.satte = satte;
 	}
 
 	public Date getCreatedAt() {
@@ -93,23 +105,12 @@ public class Person {
 		this.updatedAt = updatedAt;
 	}
 
-	public License getLicense() {
-		return license;
+	public Student getStudent() {
+		return student;
 	}
 
-	public void setLicense(License license) {
-		this.license = license;
+	public void setStudent(Student student) {
+		this.student = student;
 	}
-
-	
     
-    
-	
-	
-	
-	
-	
-	
-	
-	
 }
