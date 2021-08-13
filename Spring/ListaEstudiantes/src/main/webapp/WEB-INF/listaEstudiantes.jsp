@@ -10,8 +10,11 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row mt-5">
-				
+			<div class="row mt-4 mb-4">
+				<a class="col-md-6" href="/students/create">Crear un Estudiante</a>
+				<a class="col-md-6" href="/contacts/create">Crear un Contacto</a>
+			</div>
+			<div class="row mt-5">				
 				<h1 class="mr:20px">Listado de Estudiantes</h1>
 				<table border="1">
 					<thead class="thead-dark">

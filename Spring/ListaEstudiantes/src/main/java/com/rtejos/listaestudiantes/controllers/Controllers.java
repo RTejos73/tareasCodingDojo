@@ -7,8 +7,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 
 import com.rtejos.listaestudiantes.models.Contact;
 import com.rtejos.listaestudiantes.models.Student;
@@ -24,10 +26,20 @@ public class Controllers {
 	}
 	
 	
-	
-	
-	
 	@GetMapping("/students/create")
+	public String creaStudent(@ModelAttribute("newStudent") Student s, BindingResult result) {
+		return "students.jsp";
+	}
+	
+	@GetMapping("/contacts/create")
+	public String creaContact(@ModelAttribute("newContact") Student s, BindingResult result, Model m) {
+		List<Student> listadoEstudiantes = apiService.todosLosEstudiantes();
+		m.addAttribute("listaStudents", listadoEstudiantes);
+		return "contacts.jsp";
+	}
+	
+	
+	@PostMapping("/students/create")
 	public String index(@ModelAttribute("newStudent") Student s, BindingResult result,
 			@RequestParam(value="firstName") String firstName,
 						@RequestParam(value="lastName") String lastName,
@@ -35,13 +47,12 @@ public class Controllers {
 		
 		Student studiante = new Student(firstName, lastName, age);
 		
-		apiService.creaEstudiante(studiante);		
-		return "students.jsp";
+		apiService.creaEstudiante(studiante);
+		return "redirect:/students";
 	}
 	
-	@GetMapping("/contacts/create")
-	public String index2(@ModelAttribute("newContact") Contact c, BindingResult result,
-						 @RequestParam("student") Long idStudent, @RequestParam("address") String address,
+	@PostMapping("/contacts/create")
+	public String index2(@RequestParam("id") Long idStudent, @RequestParam("address") String address,
 						 @RequestParam("city") String city, @RequestParam("state") String state) {
 		
 		Student buscarEstudiantePorId = apiService.searchStudentById(idStudent);
@@ -52,7 +63,7 @@ public class Controllers {
 		
 		apiService.creaContacto(contacto);
 	
-		return "students.jsp";
+		return "redirect:/students";
 		
 	}
 	
