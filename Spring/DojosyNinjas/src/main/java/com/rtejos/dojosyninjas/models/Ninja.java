@@ -1,4 +1,4 @@
-package com.rtejos.listaestudiantes.models;
+package com.rtejos.dojosyninjas.models;
 
 import java.util.Date;
 
@@ -9,42 +9,40 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="contacts")
-public class Contact {
-
+@Table(name="ninja")
+public class Ninja {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String address;
-	private String city;
-	private String state;
-	@Column(updatable=false)
-	private Date createdAt;
-	private Date updatedAt;
-	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="student_id")
-    private Student student;
+	private String firstName;
+    private String lastName;
+    private int age;
+    @Column(updatable=false)
+    private Date createdAt;
+    private Date updatedAt;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="dojo_id")
+    private Dojo dojo;
 	
-	public Contact() {
+	public Ninja() {
 		
 	}
 	
-	
-	public Contact(String address, String city, String state, Student student) {
-		super();
-		this.address = address;
-		this.city = city;
-		this.state = state;
-		this.student = student;
-	}
 
+	public Ninja(String firstName, String lastName, int age, Dojo dojo) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.dojo = dojo;
+	}
 
 
 
@@ -57,60 +55,77 @@ public class Contact {
         this.updatedAt = new Date();
     }
 
+
 	public Long getId() {
 		return id;
 	}
+
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getAddress() {
-		return address;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getCity() {
-		return city;
+
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getState() {
-		return state;
+
+	public int getAge() {
+		return age;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+
+	public void setAge(int age) {
+		this.age = age;
 	}
+
 
 	public Date getCreatedAt() {
 		return createdAt;
 	}
 
+
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
+
 
 	public Date getUpdatedAt() {
 		return updatedAt;
 	}
 
+
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
-	public Student getStudent() {
-		return student;
+
+	public Dojo getDojo() {
+		return dojo;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+
+	public void setDojo(Dojo dojo) {
+		this.dojo = dojo;
 	}
+	
+    
+    
     
 }

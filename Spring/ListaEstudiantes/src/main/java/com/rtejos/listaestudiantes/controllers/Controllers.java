@@ -1,11 +1,13 @@
 package com.rtejos.listaestudiantes.controllers;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rtejos.listaestudiantes.models.Contact;
@@ -55,6 +57,13 @@ public class Controllers {
 	}
 	
 	
+	@RequestMapping("/students")
+	public String listado(Model model) {
+		List<Student> listadoEstudiantes = apiService.todosLosEstudiantes();		
+		model.addAttribute("listado", listadoEstudiantes);
+		return "listaEstudiantes.jsp";
+		
+	}
 	
 
 }
