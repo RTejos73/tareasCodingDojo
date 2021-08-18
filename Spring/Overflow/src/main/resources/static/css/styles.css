@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.tag-detail {
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+	background-color: gainsboro;
+	border: 1px solid;
+	border-radius: 10px;
+}
