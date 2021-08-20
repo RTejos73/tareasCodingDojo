@@ -1,4 +1,4 @@
-package comrtejos.equipos.modelo;
+package com.rtejos.models;
 
 public class Player {
 	
@@ -31,4 +31,5 @@ public class Player {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 }

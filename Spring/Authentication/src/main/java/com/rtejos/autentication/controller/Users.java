@@ -13,15 +13,33 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rtejos.autentication.models.User;
 import com.rtejos.autentication.service.UserService;
+import com.rtejos.autentication.validator.UserValidator;
 
 @Controller
 public class Users {
 	
 	private final UserService userService;
-    
-    public Users(UserService userService) {
+	
+	private final UserValidator userValidator;
+	
+	public Users(UserService userService, UserValidator userValidator) {
         this.userService = userService;
+        this.userValidator = userValidator;
     }
+	
+	
+    
+	@RequestMapping(value="/registration", method=RequestMethod.POST)
+    public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
+        userValidator.validate(user, result);
+        if(result.hasErrors()) {
+            return "registrationPage.jsp";
+        }
+        User u = userService.registerUser(user);
+        session.setAttribute("userId", u.getId());
+        return "redirect:/home";
+    }
+	
     
     
     @RequestMapping("/registration")
