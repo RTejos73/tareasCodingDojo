@@ -18,8 +18,7 @@ import com.rtejos.autentication.validator.UserValidator;
 @Controller
 public class Users {
 	
-	private final UserService userService;
-	
+	private final UserService userService;	
 	private final UserValidator userValidator;
 	
 	public Users(UserService userService, UserValidator userValidator) {
@@ -28,6 +27,20 @@ public class Users {
     }
 	
 	
+	
+	@RequestMapping("/registration")
+    public String registerForm(@ModelAttribute("user") User user) {
+        return "registrationPage.jsp";
+    }
+	
+	
+	
+    @RequestMapping("/login")
+    public String login() {
+        return "loginPage.jsp";
+    }
+    
+    
     
 	@RequestMapping(value="/registration", method=RequestMethod.POST)
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
@@ -42,30 +55,10 @@ public class Users {
 	
     
     
-    @RequestMapping("/registration")
-    public String registerForm(@ModelAttribute("user") User user) {
-        return "registrationPage.jsp";
-    }
-    @RequestMapping("/login")
-    public String login() {
-        return "loginPage.jsp";
-    }
     
     
     
-    @RequestMapping(value="/registration", method=RequestMethod.POST)
-    public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session, Model model) {
-    //si el resultado tiene errores, retornar a la página de registro (no se preocupe por las validaciones por ahora)
-    //si no, guarde el usuario en la base de datos, guarde el id del usuario en el objeto Session y redirija a /home
-    	
-    	if(result.hasErrors()) {
-    		return registerForm(user);
-    	}else {
-    		user = userService.registerUser(user);
-    		session.setAttribute("idUsuario", user.getId());
-    		return home(session,model);
-    	}
-    }
+    
     
     
     
@@ -89,8 +82,6 @@ public class Users {
     
     @RequestMapping("/home")
     public String home(HttpSession session, Model model) {
-        //Obtener el usuario desde session, guardarlo en el modelo y retornar a la página principal
-    	
     	if(session.getAttribute("idUsuario") != null) {
     		User user = userService.findUserById(Long.parseLong(session.getAttribute("idUsuario").toString()));
     		model.addAttribute("user", user);
@@ -105,9 +96,6 @@ public class Users {
     
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
-        // invalidar la sesión
-        // redireccionar a la página de inicio de sesión.
-    	
     	session.invalidate();
     	return "loginPage.jsp";
     	
