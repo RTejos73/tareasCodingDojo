@@ -4,85 +4,68 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Login and Register</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/styles.css">
-</head>
-<body>
-
-	<div class="container">
-		
-		<div class="row  border border-primary mt-3">
-			<div class="row">
-				<c:if test="${logoutMessage != null}">
-					<c:out value="${logoutMessage}"></c:out>
-				</c:if>
-				<c:if test="${errorMessage != null}">
-					<c:out value="${errorMessage}"></c:out>
-				</c:if>
-			</div>
-			<fieldset>
-				<h2>Login</h2>
-				<form method="POST" action="/login" class="form-horizontal">
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="email">Email:</label>
-					    <div class="col-sm-6">
-					      <input type="email" class="form-control" name="email" placeholder="Enter email">
-					    </div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="password">Password:</label>
-						<div class="col-sm-6">
-							<input type="password" class="form-control" name="password" placeholder="Enter password">
-						</div>
-					</div>
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}"/>
-					<button type="submit" class="btn btn-primary mt-3 mb-3">Login</button>
-				</form>
-			</fieldset>
-		</div>
-
-		<div class="row  border border-primary mt-3">
-		 	<p><form:errors path="user.*"/></p>
-			<h2>Register</h2>
-			<form:form method="POST" action="/registration" modelAttribute="user" class="form-horizontal">
-				<div class="form-group">
-					<form:label path="email" class="control-label col-sm-2">Email					:</form:label>
-					<div class="col-sm-6">
-						<form:input path="email" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<form:label path="firstName" class="control-label col-sm-2">First Name				:</form:label>
-					<div class="col-sm-6">
-						<form:input path="firstName" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<form:label path="lastName" class="control-label col-sm-2">Last Name				:</form:label>
-					<div class="col-sm-6">
-						<form:input path="lastName" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<form:label path="password" class="control-label col-sm-2">Password				:</form:label>
-					<div class="col-sm-6">
-						<form:password path="password" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<form:label path="passwordConfirmation" class="control-label col-sm-2">Password Confirmation	:</form:label>
-					<div class="col-sm-6">
-						<form:password path="passwordConfirmation" class="form-control"/>
-					</div>
-				</div>
-				<input type="submit" value="Register" class="btn btn-primary mt-3 mb-3" />
+	<head>
+		<meta charset="UTF-8">
+		<title>Login and Register</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet">
+	</head>
+	<body>
+	
+		<div class="container">
+	
+			<c:if test="${logoutMessage != null}">
+				<c:out value="${logoutMessage}"></c:out>
+			</c:if>
+	
+			<h1>Login</h1>
+			<c:if test="${errorMessage != null}">
+				<c:out value="${errorMessage}"></c:out>
+			</c:if>
+			<form method="POST" action="/login">
+				<p>
+					<label for="username">Email: </label> <input type="text"
+						id="username" name="username" />
+				</p>
+				<p>
+					<label for="password">Password: </label> <input type="password"
+						id="password" name="password" />
+				</p>
+				<input type="hidden" name="${_csrf.parameterName}"
+					value="${_csrf.token}" /> <input type="submit" value="Login!" />
+			</form>
+	
+			<h1>Register!</h1>
+	
+			<p>
+				<form:errors path="user.*" />
+			</p>
+	
+			<form:form method="POST" action="/registration" modelAttribute="user">
+				<p>
+					<form:label path="firstName">First Name:</form:label>
+					<form:input path="firstName" />
+				</p>
+				<p>
+					<form:label path="lastName">Last Name:</form:label>
+					<form:input path="lastName" />
+				</p>
+				<p>
+					<form:label path="email">Email:</form:label>
+					<form:input path="email" />
+				</p>
+				<p>
+					<form:label path="password">Password:</form:label>
+					<form:password path="password" />
+				</p>
+				<p>
+					<form:label path="passwordConfirmation">Password Confirmation:</form:label>
+					<form:password path="passwordConfirmation" />
+				</p>
+				<input type="submit" value="Register!" />
 			</form:form>
+	
 		</div>
-
-	</div>
-</body>
+	</body>
 </html>

@@ -71,8 +71,7 @@ public class NinjaController {
 	    
 	    //Total número de páginas que tenemos
 	    int totalPages = ninjas.getTotalPages();
-	    model.addAttribute("totalPages", totalPages);
-	   
+	    model.addAttribute("totalPages", totalPages);	   
 	    model.addAttribute("ninjasdojo", ninjas);
 	    return "listaNinjasDojo.jsp";
 	}

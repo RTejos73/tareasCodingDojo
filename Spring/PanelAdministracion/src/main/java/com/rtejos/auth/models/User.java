@@ -15,8 +15,9 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="users")
@@ -25,16 +26,19 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
+    @Size(min=8)
+    private String email;
     @Size(min=3)
     private String firstName;
     @Size(min=3)
     private String lastName;
     @Size(min=5)
+    @Type(type="text")
     private String password;
-    @Email
-    private String email;
+    
     @Transient
     private String passwordConfirmation;
+    
     @Column(updatable=false)
     private Date createdAt;
     private Date updatedAt;
@@ -47,6 +51,7 @@ public class User {
     
     public User() {
     }
+    
     public Long getId() {
         return id;
     }
@@ -110,4 +115,16 @@ public class User {
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
+    
+    public boolean checkIfAdmin() {
+		List<Role> roles = this.getRoles();
+		for( int i = 0; i < roles.size(); i++) {
+			if(roles.get(i).getName().equals("ROLE_ADMIN")) {
+				return true;
+			}
+		}
+		return false; 			
+}
+    
+    
 }
