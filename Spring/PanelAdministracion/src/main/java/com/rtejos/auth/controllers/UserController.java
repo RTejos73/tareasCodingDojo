@@ -55,7 +55,8 @@ public class UserController {
     	
         if (result.hasErrors()) {
             return "loginRegister.jsp";
-        } else if (roleService.findByName("ROLE_ADMIN").getUsers().size() < 1) {
+        } 
+        if (roleService.findByName("ROLE_ADMIN").getUsers().size() < 1) {
     		userService.saveUserWithAdminRole(user);
     		return "redirect:/login";
         } else {
