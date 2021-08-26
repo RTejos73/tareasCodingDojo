@@ -3,11 +3,13 @@ package com.rtejos.dojosyninjas.controllers;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rtejos.dojosyninjas.models.Dojo;
@@ -60,6 +62,20 @@ public class NinjaController {
 		model.addAttribute("nombre", dojo);
 		return "listaNinjasDojo.jsp";
 	} 
+	
+	
+	@RequestMapping("/pages/{pageNumber}")
+	public String getNinjasPerPage(Model model, @PathVariable("pageNumber") int pageNumber) {
+	    //Tenemos que restar 1 porque las páginas iterables empiezan con índice 0. Esto es para que nuestros enlaces puedan mostrarse desde 1...maxPage(última página) 
+	    Page<Ninja> ninjas = ninjaService.ninjasPerPage(pageNumber - 1);
+	    
+	    //Total número de páginas que tenemos
+	    int totalPages = ninjas.getTotalPages();
+	    model.addAttribute("totalPages", totalPages);
+	   
+	    model.addAttribute("ninjasdojo", ninjas);
+	    return "listaNinjasDojo.jsp";
+	}
 	
 
 }

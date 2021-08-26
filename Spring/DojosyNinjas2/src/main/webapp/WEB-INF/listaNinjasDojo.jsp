@@ -14,7 +14,10 @@
 				<a class="col-md-6" href="/dojos/listado">Volver a Listado de Dojos</a>
 			</div>
 			<div class="row mt-5 col col-md-6 ">
-				<h1 class="mr:20px"> <c:out value="${nombre.name}" /> Location Ninjas</h1>
+			<%-- 	<h1 class="mr:20px"> <c:out value="${nombre.name}" /> Location Ninjas</h1> --%>
+				<c:forEach begin="1" end="${totalPages}" var="index">
+			        <a href="/pages/${index}">${index}</a>
+			    </c:forEach>
 				<table border="1">
 					<thead class="thead-dark">
 						<tr>
@@ -24,7 +27,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${ninjasdojo}" var="nd">
+						<c:forEach items="${ninjasdojo.content}" var="nd">
 							<tr>
 								<td class="table-secondary">
 									<c:out value="${nd.firstName}"/>							
